@@ -9,12 +9,14 @@
     <meta name="description" content="Магазин Глэйси - это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес">
     <meta name="keywords" content="глэйси, мороженое, щербет, авторское, доставка, Питер">
     <title>Магазин Глейси</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="container">
+  <body>
     <header class="page-header">
       <nav class="navigation">
-        <img class="logo" src="#" alt="Логотип магазина Gllacy Shop">
-        <ul class="navigation-list">
+        <img class="logo" src="img/logo-header.svg" alt="Логотип магазина Gllacy Shop">
+        <ul class="navigation-list reset-list">
           <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">Каталог</a>
           </li>
@@ -30,19 +32,20 @@
             <a href="tel:+78005558628">+7 800 555-86-28</a>
           </p>
         </div>
-        <ul class="navigation-list navigation-user">
+        <ul class="navigation-list navigation-user reset-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
-              <span class="visually-hidden">Поиск</span>
+            <a class="navigation-link-small" href="#">
+              <img class="button-header" src="img/icons/search-icon.svg" alt="Иконка поиска">
+              <span class="link-small visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Вход</a>
+            <img class="button-header" src="img/icons/log-in-icon.svg" alt="Иконка входа">
+            <a class="navigation-link" href="#"><span class="link-small">Вход</span></a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
-              <span class="visually-hidden">Корзина</span>
-            </a>
+            <img class="button-header" src="img/icons/cart-icon.svg" alt="Иконка корзины">
+            <a class="navigation-link" href="#"><span class="link-small">Корзина</span></a>
           </li>
         </ul>
       </nav>
@@ -53,21 +56,24 @@
       <section class="slider">
         <h2 class="visually-hidden">Колесо вкусов</h2>
         <div class="slider-container">
-          <ul class="slider-list">
+          <ul class="slider-list reset-list">
             <li class="slider-list-item">
               <h3 class="ice-cream-title">Нежный пломбир с клубничным джемом</h3>
               <p class="ice-cream-description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом - это идеальный десерт для всей семьи</p>
-              <img src="#" alt="Пломбирный рожок мороженого с клубничным джемом">
+              <div class="ice-cream-demo">
+                <div class="circle"></div>
+                <img src="img/slider/strawberry-big.png" alt="Пломбирный рожок мороженого с клубничным джемом" height="507" width="306">
+              </div>
             </li>
             <li class="slider-list-item">
               <h3 class="ice-cream-title"><!-- Наименование--></h3>
               <p class="ice-cream-description"><!-- Описание--></p>
-              <img src="#" alt="Пломбирный рожок мороженого с клубничным джемом">
+              <img src="img/slider/yellow-small.png" alt="Лимонный рожок мороженого с из трех шариков" height="150" width="66">
             </li>
             <li class="slider-list-item">
               <h3 class="ice-cream-title"><!-- Наименование--></h3>
               <p class="ice-cream-description"><!-- Описание--></p>
-              <img src="#" alt="Пломбирный рожок мороженого с клубничным джемом">
+              <img src="img/slider/pink-small.png" alt="Рожок клубничного мороженого с мятой" height="150" width="66">
             </li>
           </ul>
         </div>
@@ -79,7 +85,7 @@
             <span class="visually-hidden">Вперед</span>
           </button>
         </div>
-        <ol class="slider-pagination">
+        <ol class="slider-pagination reset-list">
           <li class="slider-pagination-dots">
             <button class="button-dot" type="button">
               <span class="visually-hidden">1</span>
@@ -98,27 +104,27 @@
         </ol>
         <a class="button-white" href="#"><span>Заказать</span></a>
         <div class="social">
-          <ul class="social-icons">
+          <ul class="social-icons reset-list">
             <li class="social-icons-icon">
               <a href="https://vk.com/htmlacademy">
-                <img src="#" alt="vk">
+                <img src="img/icons/vk-icon.svg" alt="ссылка на vk" height="24" width="24">
               </a>
             </li>
             <li class="social-icons-icon">
               <a href="https://www.facebook.com/htmlacademy">
-                <img src="#" alt="facebook">
+                <img src="img/icons/fb-icon.svg" alt="ссылка на facebook" height="24" width="24">
               </a>
             </li>
             <li class="social-icons-icon">
               <a href="https://www.instagram.com/htmlacademy/">
-                <img src="#" alt="instagram">
+                <img src="img/icons/insta-icon.svg" alt=" ссылка на instagram" height="24" width="24">
               </a>
             </li>
           </ul>
         </div>
       </section>
 
-      <article class ="banners">
+      <article class="banners">
         <h2 class="title">Заказывайте мороженое и получайте подарки!</h2>
         <article class="banners-raspberry">
           <h3 class="title-small">Малинка даром!</h3>
@@ -134,12 +140,12 @@
 
       <article class="goods">
         <h2 class="title">Попробуйте самые популярные вкусы нашего мороженого</h2>
-        <ol class="product">
+        <ol class="product reset-list">
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img src="#" alt="Малиновый шарик мороженого">
-              <h3 class="title-small">Малинка</h3>
-              <p class="text">Сливочное мороженое с малиновым джемом</p>
+              <img src="img/goods/raspberry(1).jpg" alt="Малиновый шарик мороженого" height="168" width="168">
+              <h3 class="title-prod">Малинка</h3>
+              <p class="text-prod">Сливочное мороженое с малиновым джемом</p>
             </a>
             <b class="price">310 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -148,9 +154,9 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img src="#" alt="Малиновый шарик мороженого">
-              <h3 class="title-small">Фисташка</h3>
-              <p class="text">Фисташковый пломбир с кусочками шоколада</p>
+              <img src="img/goods/pistachio(1).jpg" alt="Фисташковый шарик мороженого" height="168" width="168">
+              <h3 class="title-prod">Фисташка</h3>
+              <p class="text-prod">Фисташковый пломбир с кусочками шоколада</p>
             </a>
             <b class="price">340 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -159,9 +165,9 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img src="#" alt="Малиновый шарик мороженого">
-              <h3 class="title-small">Черника</h3>
-              <p class="text">Крем-брюле с черничным джемом</p>
+              <img src="img/goods/blackberry(1).jpg" alt="Черничный шарик мороженого" height="168" width="168">
+              <h3 class="title-prod">Черника</h3>
+              <p class="text-prod">Крем-брюле с черничным джемом</p>
             </a>
             <b class="price">330 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -170,9 +176,9 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img src="#" alt="Малиновый шарик мороженого">
-              <h3 class="title-small">Бабл-гам</h3>
-              <p class="text">Ванильный пломбир со сладкой посыпкой</p>
+              <img src="img/goods/bubble-gum(1).jpg" alt="Шарик мороженого бабл-гам" height="168" width="168">
+              <h3 class="title-prod">Бабл-гам</h3>
+              <p class="text-prod">Ванильный пломбир со сладкой посыпкой</p>
             </a>
             <b class="price">320 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -185,21 +191,21 @@
       <section class="seo">
         <div class=seo-container>
           <h2 class="title">Магазин Глейси - это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
-          <ul class="advantages">
+          <ul class="advantages reset-list">
             <li>
-              <img src="#" alt="Иконка мороженое">
+              <img src="img/icons/ice-cream-icon.svg" alt="Иконка мороженое" height="48" width="48">
               <p class="text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий</p>
             </li>
             <li>
-              <img src="#" alt="Иконка коровка">
+              <img src="img/icons/cow-icon.svg" alt="Иконка коровка" height="48" width="48">
               <p class="text">Закупка ингредиентов производится только у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.</p>
             </li>
             <li>
-              <img src="#" alt="Иконка лист">
+              <img src="img/icons/leaf-icon.svg" alt="Иконка лист" height="48" width="48">
               <p class="text">Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.</p>
             </li>
             <li>
-              <img src="#" alt="Иконка термометр">
+              <img src="img/icons/temp-icon.svg" alt="Иконка термометр" height="48" width="48">
               <p class="text">Доставка нашего мороженого осуществляется в специальном термопаке, который не дает мороженому растаять и позволяет сохранить превосходный вкус.</p>
             </li>
           </ul>
@@ -210,8 +216,7 @@
         <h2 class="visually-hidden">Контейнер с новостями и подпиской</h2>
         <article class="news">
           <h2 class="visually-hidden">Новости</h2>
-          <img src="#" alt="Вариант сервировки">
-          <p class="text">Новое в нашем блоге</p>
+          <p class="text-blog">Новое в нашем блоге</p>
           <a class="title-small" href="#">10 способов сервировки фруктовых щербетов к столу</a>
         </article>
         <article class="subscription">
@@ -268,10 +273,10 @@
         <div class="contacts">
           <div class="contacts-container">
             <p class="text">Адрес главного офиса и офлайн-магазина:</p>
-            <p class="call-me">Наб. Реки Карповки, 5 лит П, Санкт-Петербург</p>
+            <p class="title-prod">Наб. Реки Карповки, 5 лит П, Санкт-Петербург</p>
             <p class="text">Для заказов по телефону:</p>
             <p class="call-me">
-              <a href="tel:+78128121212">+7 (812) 812-12-12</a>
+              <a class="title-prod" href="tel:+78128121212">+7 (812) 812-12-12</a>
             </p>
             <p class="text-small">(с 10 до 20 ежедневно)</p>
             <a class="button-red" href="#"><span>Форма обратной связи</span></a>
@@ -281,28 +286,28 @@
 
       <footer class="footer">
         <div class="social">
-          <ul class="social-icons">
+          <ul class="social-icons reset-list">
             <li class="social-icons-icon">
               <a href="https://vk.com/htmlacademy">
-                <img src="#" alt="vk">
+                  <img src="img/icons/vk-icon.svg" alt="ссылка на vk" height="24" width="24">
               </a>
             </li>
             <li class="social-icons-icon">
               <a href="https://www.facebook.com/htmlacademy">
-                <img src="#" alt="facebook">
+                  <img src="img/icons/fb-icon.svg" alt="ссылка на facebook" height="24" width="24">
               </a>
             </li>
             <li class="social-icons-icon">
               <a href="https://www.instagram.com/htmlacademy/">
-                <img src="#" alt="instagram">
+                  <img src="img/icons/insta-icon.svg" alt="ссылка на instagram" height="24" width="24">
               </a>
             </li>
           </ul>
         </div>
-        <ul class="more">
+        <ul class="more reset-list">
           <!--Сделать сердце и выделение жирным шрифтом псевдоклассом :hover?-->
           <li class="more-information">
-            <a class="information-href" href="#">Для поставщиков</a>
+            <a class="information-href" href="#"><span class="choosen">Для поставщиков</span></a>
           </li>
           <li class="more-information">
             <a class="information-href" href="#">Наши документы</a>
@@ -317,11 +322,11 @@
         <div class="to-academy">
           <p class="academy-logo">
             <a href="https://htmlacademy.ru/">
-              <img src="#" alt="Логотип HTML Academy">
+              <img src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy" height="27" width="93">
             </a>
           </p>
           <p class="academy-href">Сделано в
-            <a href="https://htmlacademy.ru/"> Ⓒ 2021</a>
+            <a href="https://htmlacademy.ru/"><span class="href-the-smallest"> .html academy </span></a>Ⓒ 2021
           </p>
         </div>
       </footer>

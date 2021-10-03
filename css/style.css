@@ -1,0 +1,155 @@
+/*Задать color и bg-color для изображений*/
+/*background-size: 100% auto;
+  background-repeat: no-repeat;*/
+/*внутри текста задать text-align*/
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src:url("../fonts/inter-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src:url("../fonts/inter-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src:url("../fonts/inter-900.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #2D3440;
+  background-color: #FEAFC3;
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #2D3440;
+}
+
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.navigation-link,
+.text-blog,
+::placeholder {
+  line-height: 20px;
+}
+
+.link-small,
+.text-small,
+.information-href {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.call-me a,
+.button-white,
+.button-red,
+.form-label label {
+  font-weight: 700;
+  line-height: 20px;
+}
+/* Хежер меню
+.navigation-user li {
+  background-color: #FFCBD8;
+  padding: 7px;
+}
+*/
+
+.title {
+  font-size: 32px;
+  line-height: 46px;
+  font-weight: 900;
+}
+
+.banners .title,
+.goods .title,
+.seo-container .title {
+  text-align: center;
+}
+
+.title-small {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.title-prod {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.text-prod {
+  text-align: center;
+}
+
+.ice-cream-demo {
+   position: relative;
+}
+
+.ice-cream-demo img {
+  z-index: 1;
+}
+
+.circle {
+   width: 312px;
+   height: 312px;
+   background: #FFCBD8;
+   border-radius: 50%;
+   position: absolute;
+   top: 102px;
+   z-index: -1;
+}
+
+.ice-cream-title {
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 900;
+}
+
+.ice-cream-description {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.choosen {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.academy-href,
+.href-the-smallest {
+  font-size: 12px;
+  line-height: 16px;
+}
