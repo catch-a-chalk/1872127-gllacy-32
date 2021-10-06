@@ -59,13 +59,20 @@ a {
 
 .navigation-link,
 .text-blog,
-::placeholder {
+::placeholder,
+.pagination-link {
   line-height: 20px;
 }
 
 .link-small,
 .text-small,
-.information-href {
+.information-href,
+.catalog-filter-title,
+.select-control,
+.range-toggle,
+.catalog-filter-label,
+.control-label
+ {
   font-size: 14px;
   line-height: 20px;
 }
@@ -73,7 +80,7 @@ a {
 .call-me a,
 .button-white,
 .button-red,
-.form-label label {
+.form-label label, {
   font-weight: 700;
   line-height: 20px;
 }
@@ -84,7 +91,8 @@ a {
 }
 */
 
-.title {
+.title,
+.inner-header-title {
   font-size: 32px;
   line-height: 46px;
   font-weight: 900;
@@ -142,7 +150,9 @@ a {
   line-height: 24px;
 }
 
-.choosen {
+.choosen,
+.breadcrumbs-link,
+.button-submit-filter {
   font-size: 14px;
   line-height: 20px;
   font-weight: 700;

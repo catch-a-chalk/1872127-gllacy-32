@@ -6,15 +6,17 @@
     <meta name="description" content="Каталог товаров магазина Глэйси">
     <meta name="keywords" content="глэйси, мороженое, щербет, вкусы, авторское, доставка, Питер">
     <title>Каталог</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body class="container">
     <header class="page-header">
       <nav class="navigation">
         <a href="index.html">
-          <img class="logo" src="#" alt="Логотип магазина Gllacy Shop">
+          <img class="logo" src="img/logo-header.svg" alt="Логотип магазина Gllacy Shop">
         </a>
-        <ul class="navigation-list">
+        <ul class="navigation-list reset-list">
           <li class="navigation-item">
             <a class="navigation-link selected-link" href="catalog.html">Каталог</a>
           </li>
@@ -30,20 +32,20 @@
             <a href="tel:+78005558628">+7 800 555-86-28</a>
           </p>
         </div>
-        <ul class="navigation-list navigation-user">
+        <ul class="navigation-list navigation-user reset-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
-              <span class="visually-hidden">Поиск</span>
+            <a class="navigation-link-small" href="#">
+              <img class="button-header" src="img/icons/icon-nav-search.svg" alt="Иконка поиска">
+              <span class="link-small visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Вход</a>
+            <img class="button-header" src="img/icons/icon-nav-log.svg" alt="Иконка входа">
+            <a class="navigation-link" href="#"><span class="link-small">Вход</span></a>
           </li>
           <li class="navigation-item">
-            <!--С этим нужно что-то сделать!-->
-            <a class="navigation-link" href="#">
-              <span class="visually-hidden">Корзина</span>
-            </a>
+            <img class="button-header" src="img/icons/icon-nav-cart.svg" alt="Иконка корзины">
+            <a class="navigation-link" href="#"><span class="link-small">Корзина</span></a>
           </li>
         </ul>
       </nav>
@@ -51,7 +53,8 @@
 
     <main class="main-inner">
       <header class="inner-header">
-        <ul class="breadcrumbs">
+        <!-- Задать псевдоклассом подчеркивание -->
+        <ul class="breadcrumbs reset-list">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">Главная</a>
           </li>
@@ -93,31 +96,31 @@
           </fieldset>
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Жирность:</legend>
-            <ul class="catalog-filter-list">
+            <ul class="catalog-filter-list reset-list">
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="radio" name="fats" value="zero-per-cent">
+                  <input class="control-input" type="radio" name="fats" value="zero-per-cent">
                   <span class="control-mark"></span>
                   <span class="control-label">0%</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="radio" name="fats" value="lt-ten-per-cent" checked>
+                  <input class="control-input" type="radio" name="fats" value="lt-ten-per-cent" checked>
                   <span class="control-mark"></span>
                   <span class="control-label">до 10%</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="radio" name="fats" value="lt-thirty-per-cent">
+                  <input class="control-input" type="radio" name="fats" value="lt-thirty-per-cent">
                   <span class="control-mark"></span>
                   <span class="control-label">до 30%</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="radio" name="fats" value="gt-thirty-per-cent">
+                  <input class="control-input" type="radio" name="fats" value="gt-thirty-per-cent">
                   <span class="control-mark"></span>
                   <span class="control-label">выше 30%</span>
                 </label>
@@ -126,38 +129,38 @@
           </fieldset>
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Наполнители:</legend>
-            <ul class="catalog-filter-list">
+            <ul class="catalog-filter-list reset-list">
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="chocolate" checked>
+                  <input class="control-input" type="checkbox" name="chocolate" checked>
                   <span class="control-mark"></span>
                   <span class="control-label">шоколадные</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="powdered-sugar" checked>
+                  <input class="control-input" type="checkbox" name="powdered-sugar" checked>
                   <span class="control-mark"></span>
                   <span class="control-label">сахарные присыпки</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="fruits">
+                  <input class="control-input" type="checkbox" name="fruits">
                   <span class="control-mark"></span>
                   <span class="control-label">фрукты</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="syrops">
+                  <input class="control-input" type="checkbox" name="syrops">
                   <span class="control-mark"></span>
                   <span class="control-label">сиропы</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="jams">
+                  <input class="control-input" type="checkbox" name="jams">
                   <span class="control-mark"></span>
                   <span class="control-label">джемы</span>
                 </label>
@@ -169,12 +172,12 @@
       </section>
 
       <section class="products">
-        <ul class="product">
+        <ul class="product reset-list">
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img src="#" alt="Малиновый шарик мороженого">
-              <h3 class="title-small">Малинка</h3>
-              <p class="text">Сливочное мороженое с малиновым джемом</p>
+              <img src="img/goods/raspberry.png" alt="Малиновый шарик мороженого" height="168" width="168">
+              <h3 class="title-prod">Малинка</h3>
+              <p class="text-prod">Сливочное мороженое с малиновым джемом</p>
             </a>
             <b class="price">310 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -183,9 +186,9 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img src="#" alt="Фисташковый шарик мороженого">
-              <h3 class="title-small">Фисташка</h3>
-              <p class="text">Фисташковый пломбир с кусочками шоколада</p>
+              <img src="img/goods/pistachio.png" alt="Фисташковый шарик мороженого" height="168" width="168">
+              <h3 class="title-prod">Фисташка</h3>
+              <p class="text-prod">Фисташковый пломбир с кусочками шоколада</p>
             </a>
             <b class="price">340 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -194,9 +197,9 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img src="#" alt="Черничный шарик мороженого">
-              <h3 class="title-small">Черника</h3>
-              <p class="text">Крем-брюле с черничным джемом</p>
+              <img src="img/goods/blueberry.png" alt="Черничный шарик мороженого" height="168" width="168">
+              <h3 class="title-prod">Черника</h3>
+              <p class="text-prod">Крем-брюле с черничным джемом</p>
             </a>
             <b class="price">330 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -205,9 +208,9 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img src="#" alt="Шарик мороженого бабл-гам">
-              <h3 class="title-small">Бабл-гам</h3>
-              <p class="text">Ванильный пломбир со сладкой посыпкой</p>
+              <img src="img/goods/bubble-gum.png" alt="Шарик мороженого бабл-гам" height="168" width="168">
+              <h3 class="title-prod">Бабл-гам</h3>
+              <p class="text-prod">Ванильный пломбир со сладкой посыпкой</p>
             </a>
             <b class="price">320 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -216,9 +219,9 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img src="#" alt="Шарик мороженого с ежевикой">
-              <h3 class="title-small">Ежевика</h3>
-              <p class="text">Сливочное мороженое с ежевичным джемом</p>
+              <img src="img/goods/blackberry.png" alt="Шарик мороженого с ежевикой">
+              <h3 class="title-prod">Ежевика</h3>
+              <p class="text-prod">Сливочное мороженое с ежевичным джемом</p>
             </a>
             <b class="price">330 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -227,9 +230,9 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img src="#" alt="Банановый шарик мороженого">
-              <h3 class="title-small">Банан</h3>
-              <p class="text">Сливочный пломбир с банановым вкусом</p>
+              <img src="img/goods/banana.png" alt="Банановый шарик мороженого">
+              <h3 class="title-prod">Банан</h3>
+              <p class="text-prod">Сливочный пломбир с банановым вкусом</p>
             </a>
             <b class="price">340 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -238,9 +241,9 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img src="#" alt="Шоколадный шарик мороженого">
-              <h3 class="title-small">Шоколадка</h3>
-              <p class="text">Классический шоколадный пломбир</p>
+              <img src="img/goods/chocolate.png" alt="Шоколадный шарик мороженого">
+              <h3 class="title-prod">Шоколадка</h3>
+              <p class="text-prod">Классический шоколадный пломбир</p>
             </a>
             <b class="price">270 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -249,9 +252,9 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img src="#" alt="Клубничный шарик мороженого">
-              <h3 class="title-small">Клубничка</h3>
-              <p class="text">Сливочный пломбир с клубничным вкусом</p>
+              <img src="img/goods/strawberry.png" alt="Клубничный шарик мороженого">
+              <h3 class="title-prod">Клубничка</h3>
+              <p class="text-prod">Сливочный пломбир с клубничным вкусом</p>
             </a>
             <b class="price">300 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -260,9 +263,9 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img src="#" alt="Шарик мороженого со вкусом лимона">
-              <h3 class="title-small">Лимон</h3>
-              <p class="text">Освежающий лимонный сорбет</p>
+              <img src="img/goods/lemon.png" alt="Шарик мороженого со вкусом лимона">
+              <h3 class="title-prod">Лимон</h3>
+              <p class="text-prod">Освежающий лимонный сорбет</p>
             </a>
             <b class="price">310 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -271,9 +274,9 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img src="#" alt="Шарик мороженого с минтолом">
-              <h3 class="title-small">Минтол</h3>
-              <p class="text">Сливочный пломбир с ментоловым сиропом</p>
+              <img src="img/goods/menthol.png" alt="Шарик мороженого с минтолом">
+              <h3 class="title-prod">Минтол</h3>
+              <p class="text-prod">Сливочный пломбир с ментоловым сиропом</p>
             </a>
             <b class="price">320 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -282,9 +285,9 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img src="#" alt="Шарик мороженого с орехом">
-              <h3 class="title-small">Орешек</h3>
-              <p class="text">Фисташковый пломбир с шоколадным сиропом</p>
+              <img src="img/goods/nut.png" alt="Шарик мороженого с орехом">
+              <h3 class="title-prod">Орешек</h3>
+              <p class="text-prod">Фисташковый пломбир с шоколадным сиропом</p>
             </a>
             <b class="price">360 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -293,9 +296,9 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img src="#" alt="Шарик мороженого крем-брюле">
-              <h3 class="title-small">Крем-брюле</h3>
-              <p class="text">Классическое крем-брюле</p>
+              <img src="img/goods/cream-brulee.png" alt="Шарик мороженого крем-брюле">
+              <h3 class="title-prod">Крем-брюле</h3>
+              <p class="text-prod">Классическое крем-брюле</p>
             </a>
             <b class="price">280 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -308,9 +311,9 @@
       <section class="pagination">
         <h2 class="visually-hidden">Навигация по страницам</h2>
         <button class="pagination-more button-white" type="button">Показать еще</button>
-        <ul class="paginataion-list">
+        <ul class="paginataion-list reset-list">
           <li class="pagination-item">
-            <a class="pagination-link pagination-prev pagination-disabled visually-hidden">
+            <a class="pagination-link pagination-prev pagination-disabled">
               <span class="visually-hidden">Предыдущая страница</span>
             </a>
           </li>
@@ -340,25 +343,25 @@
 
     <footer class="footer">
       <div class="social">
-        <ul class="social-icons">
+        <ul class="social-icons reset-list">
           <li class="social-icons-icon">
             <a href="https://vk.com/htmlacademy">
-              <img src="#" alt="vk">
+              <img src="img/icons/icon-soc-vk.svg" alt="ссылка на vk" height="24" width="24">
             </a>
           </li>
           <li class="social-icons-icon">
             <a href="https://www.facebook.com/htmlacademy">
-              <img src="#" alt="facebook">
+              <img src="img/icons/icon-soc-fb.svg" alt="ссылка на facebook" height="24" width="24">
             </a>
           </li>
           <li class="social-icons-icon">
             <a href="https://www.instagram.com/htmlacademy/">
-              <img src="#" alt="instagram">
+              <img src="img/icons/icon-soc-insta.svg" alt=" ссылка на instagram" height="24" width="24">
             </a>
           </li>
         </ul>
       </div>
-      <ul class="more">
+      <ul class="more reset-list">
         <!--Сделать сердце и выделение жирным шрифтом пснвдоклассом :hover?-->
         <li class="more-information">
           <a class="information-href" href="#">Для поставщиков</a>
@@ -376,7 +379,7 @@
       <div class="to-academy">
         <p class="academy-logo">
           <a href="https://htmlacademy.ru/">
-            <img src="#" alt="Логотип HTML Academy">
+            <img src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy" height="27" width="93">
           </a>
         </p>
         <p class="academy-href">Сделано в
