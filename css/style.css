@@ -117,8 +117,10 @@ a {
   text-align: center;
 }
 
-.text-prod {
-  text-align: center;
+.contacts-container .title-prod,
+.call-me a
+ {
+  text-align: left;
 }
 
 .ice-cream-demo {
@@ -129,7 +131,7 @@ a {
   z-index: 1;
 }
 
-.circle {
+.circle-wide {
    width: 312px;
    height: 312px;
    background: #FFCBD8;
@@ -137,6 +139,18 @@ a {
    position: absolute;
    top: 102px;
    z-index: -1;
+}
+
+/*Задать top*/
+.circle-narrow {
+  width: 100px;
+  height: 100px;
+  background: #FFCBD8;
+  opacity: 40%;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  z-index: -1;
 }
 
 .ice-cream-title {
@@ -162,4 +176,296 @@ a {
 .href-the-smallest {
   font-size: 12px;
   line-height: 16px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 104px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+
+.navigation-list {
+  max-width: 580px; /* Оставляем на случай, если добавятся колонки?*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navigation-item {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.navigation-user {
+  max-width: 275px; /* Аналогично задаем в случае увеличения .navigation-user?*/
+}
+
+/*Задать размеры боксов*/
+/*Добавить отступы между текстом*/
+/*И между секциями*/
+/*Выравнивание картинок относително боксов*/
+/*Выравнивание текста по центру в карточках товара*/
+.first-screen,
+.first-screen-bottom {
+  width: 100%;
+}
+
+.slider-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-list-item:nth-of-type(1) {
+  width: 470px;
+}
+
+.slider-list-item:nth-of-type(2) {
+  width: 348px;
+}
+
+.slider-list-item:nth-of-type(3),
+.slider-list-item:nth-of-type(4) {
+  width: 100px; /*Или задать размера картинки, ведь энивей используеи absolute для circle? */
+}
+
+.first-screen-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-screen,
+.banners,
+.goods,
+.seo,
+.news-and-subscription,
+.delivery {
+  margin-bottom: 80px;
+}
+
+.slider-pagination {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/*Отступ для примера*/
+.slider-pagination-dots {
+  margin-right: 5px;
+}
+
+.social-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*Отступ для примера*/
+.social-right-icon {
+  margin-left: 15px;
+}
+
+.banners-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner {
+  width: 570px;
+  height: 268px;
+  background-color: #FF7799;
+  border-radius: 16px;
+}
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: auto;
+  align-items: flex-end;
+}
+
+.product-card {
+  width: 270px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.backing {
+  position: absolute;
+  width: 270px;
+  height: 281px;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  z-index: -1;
+  bottom: 0;
+}
+
+.seo-container {
+  width: 1122px;
+  height: 432px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+
+.advantages {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.advantage {
+  display: inline-flex;
+  width: 500px;
+}
+
+/* вариант с гридами
+.advantages {
+  display: grid;
+  grid-row-gap: 25px; итого 50 пикселей
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2,1fr);
+}
+
+.adventage {
+  display: flex;
+}*/
+
+.news-and-subscription {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news,
+.subscription {
+  width: 570px;
+  height: 216px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+}
+
+/*После разметки формы заменить значение высоты на автоматическое*/
+.delivery {
+  height: 534px;
+  background-image: url('../img/delivery-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delivery-about {
+  width: 371px;
+  align-items: center;
+}
+
+.delivery-form {
+  width: 420px;
+}
+
+/*После разметки контактов заменить значение высоты на автоматическое*/
+.contacts {
+  height: 492px;
+  background-image: url('../img/feedback-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 16px;
+  margin: 0;
+}
+
+.contacts-container {
+  width: 343px;
+  height: 364px;
+  display: inline-block;
+  background-color: #FCFCFC;
+  border-radius: 16px;
+  margin-top: 64px;
+  margin-right: 763px;
+  margin-bottom: 64px;
+  margin-left: 64px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-left {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-left-icon {
+  margin-right: 15px;
+}
+
+.more {
+  display: grid;
+  grid-row-gap: 8px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2,1fr);
+}
+
+.to-academy {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.breadcrumbs-item {
+  margin-right: 27px;
+}
+
+.catalog-filter {
+  width: 807px;
+  display: grid;
+  grid-row-gap: 8px;
+  grid-column-gap: 11px;
+  grid-template-areas:
+  "sorting price fats fats"
+  "topping topping topping accept"
+}
+
+/*Сортировка:*/
+.catalog-filter-group:nth-of-type(1) {
+  grid-area: sorting;
+}
+/*Цена:*/
+.catalog-filter-group:nth-of-type(2) {
+  grid-area: price;
+}
+/*Жирность:*/
+.catalog-filter-group:nth-of-type(3) {
+  grid-area: fats;
+}
+/*Наполнители:*/
+.catalog-filter-group:nth-of-type(4) {
+  grid-area: topping;
+}
+/*Применить*/
+.catalog-filter-group a {
+  grid-area: accept;
+}
+
+/*Жирность:*/
+.catalog-filter-list:nth-of-type(1) {
+  display: flex;
+  justify-content: space-between;
 }

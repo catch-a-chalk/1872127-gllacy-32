@@ -10,15 +10,13 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
 
-  <body class="container">
+  <body>
     <header class="page-header">
       <nav class="navigation">
-        <a href="index.html">
-          <img class="logo" src="img/logo-header.svg" alt="Логотип магазина Gllacy Shop">
-        </a>
+        <img class="logo" src="img/logo-header.svg" alt="Логотип магазина Gllacy Shop">
         <ul class="navigation-list reset-list">
           <li class="navigation-item">
-            <a class="navigation-link selected-link" href="catalog.html">Каталог</a>
+            <a class="navigation-link" href="catalog.html">Каталог</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">Доставка и оплата</a>
@@ -27,18 +25,21 @@
             <a class="navigation-link" href="#">О компании</a>
           </li>
         </ul>
-        <div class="contacts">
-          <p class="call-me">
-            <a href="tel:+78005558628">+7 800 555-86-28</a>
-          </p>
-        </div>
-        <ul class="navigation-list navigation-user reset-list">
+        <ul class="navigation-list reset-list">
+          <li class="navigation-item">
+            <p class="call-me">
+              <!-- КАК СДЕЛАТЬ РАБОЧИЙ font-weight: 700;??? -->
+              <a href="tel:+78128121212">+7 (812) 812-12-12</a>
+            </p>
+          </li>
           <li class="navigation-item">
             <a class="navigation-link-small" href="#">
               <img class="button-header" src="img/icons/icon-nav-search.svg" alt="Иконка поиска">
               <span class="link-small visually-hidden">Поиск</span>
             </a>
           </li>
+        </ul>
+        <ul class="navigation-list navigation-user reset-list">
           <li class="navigation-item">
             <img class="button-header" src="img/icons/icon-nav-log.svg" alt="Иконка входа">
             <a class="navigation-link" href="#"><span class="link-small">Вход</span></a>
@@ -167,8 +168,8 @@
               </li>
             </ul>
           </fieldset>
+          <a href="#" class="button-submit-filter">Применить</a>
         </form>
-        <a href="#" class="button-submit-filter">Применить</a>
       </section>
 
       <section class="products">
@@ -343,28 +344,28 @@
 
     <footer class="footer">
       <div class="social">
-        <ul class="social-icons reset-list">
-          <li class="social-icons-icon">
+        <ul class="social-left reset-list">
+          <li class="social-left-icon">
             <a href="https://vk.com/htmlacademy">
               <img src="img/icons/icon-soc-vk.svg" alt="ссылка на vk" height="24" width="24">
             </a>
           </li>
-          <li class="social-icons-icon">
+          <li class="social-left-icon">
             <a href="https://www.facebook.com/htmlacademy">
               <img src="img/icons/icon-soc-fb.svg" alt="ссылка на facebook" height="24" width="24">
             </a>
           </li>
-          <li class="social-icons-icon">
+          <li class="social-left-icon">
             <a href="https://www.instagram.com/htmlacademy/">
-              <img src="img/icons/icon-soc-insta.svg" alt=" ссылка на instagram" height="24" width="24">
+              <img src="img/icons/icon-soc-insta.svg" alt="ссылка на instagram" height="24" width="24">
             </a>
           </li>
         </ul>
       </div>
       <ul class="more reset-list">
-        <!--Сделать сердце и выделение жирным шрифтом пснвдоклассом :hover?-->
+        <!--Сделать сердце и выделение жирным шрифтом псевдоклассом :hover?-->
         <li class="more-information">
-          <a class="information-href" href="#">Для поставщиков</a>
+          <a class="information-href" href="#"><span class="choosen">Для поставщиков</span></a>
         </li>
         <li class="more-information">
           <a class="information-href" href="#">Наши документы</a>
@@ -383,7 +384,7 @@
           </a>
         </p>
         <p class="academy-href">Сделано в
-          <a href="https://htmlacademy.ru/"> .html academy </a>Ⓒ 2021
+          <a href="https://htmlacademy.ru/"><span class="href-the-smallest"> .html academy </span></a>Ⓒ 2021
         </p>
       </div>
     </footer>
