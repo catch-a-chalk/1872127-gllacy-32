@@ -9,13 +9,12 @@
     <meta name="description" content="Магазин Глэйси - это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес">
     <meta name="keywords" content="глэйси, мороженое, щербет, авторское, доставка, Питер">
     <title>Магазин Глейси</title>
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <nav class="navigation">
-        <img class="logo" src="img/logo-header.svg" alt="Логотип магазина Gllacy Shop">
+        <img class="logo" src="img/logo-header.svg" alt="Логотип магазина Gllacy Shop" height="56" width="137">
         <ul class="navigation-list reset-list">
           <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">Каталог</a>
@@ -27,28 +26,20 @@
             <a class="navigation-link" href="#">О компании</a>
           </li>
         </ul>
-        <ul class="navigation-list reset-list">
+        <ul class="navigation-list navigation-user reset-list">
           <li class="navigation-item">
             <p class="call-me">
-              <!-- КАК СДЕЛАТЬ РАБОЧИЙ font-weight: 700;??? -->
               <a href="tel:+78128121212">+7 (812) 812-12-12</a>
             </p>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link-small" href="#">
-              <img class="button-header" src="img/icons/icon-nav-search.svg" alt="Иконка поиска">
-              <span class="link-small visually-hidden">Поиск</span>
-            </a>
-          </li>
-        </ul>
-        <ul class="navigation-list navigation-user reset-list">
-          <li class="navigation-item">
-            <img class="button-header" src="img/icons/icon-nav-log.svg" alt="Иконка входа">
-            <a class="navigation-link" href="#"><span class="link-small">Вход</span></a>
+            <a class="navigation-link-small" href="#"><span class="link-small-search"></span></a>
           </li>
           <li class="navigation-item">
-            <img class="button-header" src="img/icons/icon-nav-cart.svg" alt="Иконка корзины">
-            <a class="navigation-link" href="#"><span class="link-small">Корзина</span></a>
+            <a class="navigation-link" href="#"><span class="link-small-login">Вход</span></a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#"><span class="link-small-basket">Корзина</span></a>
           </li>
         </ul>
       </nav>
@@ -135,42 +126,57 @@
         </div>
       </section>
 
+<!-- Сделать флексом?-->
       <article class="banners">
-        <h2 class="title">Заказывайте мороженое и получайте подарки!</h2>
+        <h2 class="title">Заказывайте мороженое <br>и получайте подарки!</h2>
         <div class="banners-box">
           <article class="banner">
-            <h3 class="title-small">Малинка даром!</h3>
-            <p class="text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <a class="button-white" href="#"><span>Хочу подарок</span></a>
+            <div class="banner-words">
+              <h3 class="title-small">Малинка даром!</h3>
+              <p class="text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+              <a class="button-white" href="#"><span>Хочу подарок</span></a>
+              <div class="empty"></div>
+            </div>
+            <div class="banner-raspberry">
+              <img src="img/banners/raspberry.png" alt="малина в рожке мороженого" height="240" width="181">
+            </div>
           </article>
           <article class="banner">
-            <h3 class="title-small">Маршмеллоу даром!</h3>
-            <p class="text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
-            <a class="button-white" href="#"><span>Хочу подарок</span></a>
+            <div class="banner-words">
+              <h3 class="title-small">Маршмеллоу даром!</h3>
+              <p class="text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
+              <a class="button-white" href="#"><span>Хочу подарок</span></a>
+              <div class="empty"></div>
+            </div>
+            <div class="banner-marshmallow">
+              <img src="img/banners/marshmallow.png" alt="маршмеллоу в рожке мороженого" height="249" width="232">
+            </div>
           </article>
         </div>
       </article>
 
       <article class="goods">
-        <h2 class="title">Попробуйте самые популярные вкусы нашего мороженого</h2>
+        <h2 class="title">Попробуйте самые популярные <br>вкусы нашего мороженого</h2>
         <ol class="product reset-list">
           <li class="product-card">
             <div class="backing"></div>
             <a class="product-card-link" href="#">
               <img src="img/goods/raspberry.png" alt="Малиновый шарик мороженого" height="168" width="168">
               <h3 class="title-prod">Малинка</h3>
-              <p class="text-prod">Сливочное мороженое с малиновым джемом</p>
+              <p class="text-prod">Сливочное мороженое <br>с малиновым джемом</p>
             </a>
-            <b class="price">310 ₽/<span>кг</span></b>
-            <a class="add-to-basket" href="#">
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
+            <div class="product-card-bottom">
+              <b class="price">310 ₽/<span>кг</span></b>
+              <a class="add-to-basket" href="#">
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+            </div>
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
               <img src="img/goods/pistachio.png" alt="Фисташковый шарик мороженого" height="168" width="168">
               <h3 class="title-prod">Фисташка</h3>
-              <p class="text-prod">Фисташковый пломбир с кусочками шоколада</p>
+              <p class="text-prod">Фисташковый пломбир <br>с кусочками шоколада</p>
             </a>
             <b class="price">340 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -181,7 +187,7 @@
             <a class="product-card-link" href="#">
               <img src="img/goods/blueberry.png" alt="Черничный шарик мороженого" height="168" width="168">
               <h3 class="title-prod">Черника</h3>
-              <p class="text-prod">Крем-брюле с черничным джемом</p>
+              <p class="text-prod">Крем-брюле <br>с черничным джемом</p>
             </a>
             <b class="price">330 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -192,7 +198,7 @@
             <a class="product-card-link" href="#">
               <img src="img/goods/bubble-gum.png" alt="Шарик мороженого бабл-гам" height="168" width="168">
               <h3 class="title-prod">Бабл-гам</h3>
-              <p class="text-prod">Ванильный пломбир со сладкой посыпкой</p>
+              <p class="text-prod">Ванильный пломбир <br>со сладкой посыпкой</p>
             </a>
             <b class="price">320 ₽/<span>кг</span></b>
             <a class="add-to-basket" href="#">
@@ -204,7 +210,7 @@
 
       <section class="seo">
         <div class=seo-container>
-          <h2 class="title">Магазин Глейси - это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
+          <h2 class="title">Магазин Глейси - это онлайн и офлайн-магазин по продаже <br>мороженого собственного производства на развес</h2>
           <ul class="advantages reset-list">
             <li class="advantage">
                 <img src="img/icons/icon-seo-ice.svg" alt="Иконка мороженое" height="48" width="48">
@@ -231,7 +237,7 @@
         <article class="news">
           <h2 class="visually-hidden">Новости</h2>
           <p class="text-blog">Новое в нашем блоге</p>
-          <a class="title-small" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+          <a class="title-small" href="#">10 способов сервировки <br>фруктовых щербетов <br>к столу</a>
         </article>
         <article class="subscription">
           <h2 class="visually-hidden">Подписка</h2>
@@ -247,7 +253,7 @@
 
       <section class="delivery">
         <div class="delivery-about">
-          <h2 class="title">Доставка любимого мороженого на дом</h2>
+          <h2 class="title">Доставка любимого <br>мороженого на дом</h2>
           <p class="text">Хочется полакомиться любимым десертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом и курьер пивезет вам ваш заказ в течение часа!</p>
         </div>
         <div class="delivery-form">

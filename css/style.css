@@ -1,8 +1,9 @@
-/*Задать color и bg-color для изображений*/
-/*background-size: 100% auto;
-  background-repeat: no-repeat;*/
-/*внутри текста задать text-align*/
-
+/*Задать размеры боксов*/
+/*Добавить отступы между текстом*/
+/*И между секциями*/
+/*Выравнивание картинок относително боксов*/
+/*Выравнивание текста по центру в карточках товара*/
+/*Отрабоать отступы в навигации*/
 @font-face {
   font-family: "Inter";
   font-style: normal;
@@ -47,6 +48,13 @@ a {
   color: #2D3440;
 }
 
+p,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
 .reset-list {
   margin: 0;
   padding: 0;
@@ -54,7 +62,28 @@ a {
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.first-screen,
+.banners,
+.goods,
+.seo,
+.news-and-subscription,
+.delivery {
+  margin-bottom: 80px;
+}
+
+.title {
+  padding: 0;
+  margin-bottom: 56px;
 }
 
 .navigation-link,
@@ -71,8 +100,7 @@ a {
 .select-control,
 .range-toggle,
 .catalog-filter-label,
-.control-label
- {
+.control-label {
   font-size: 14px;
   line-height: 20px;
 }
@@ -80,16 +108,10 @@ a {
 .call-me a,
 .button-white,
 .button-red,
-.form-label label, {
+.form-label label {
   font-weight: 700;
   line-height: 20px;
 }
-/* Хежер меню
-.navigation-user li {
-  background-color: #FFCBD8;
-  padding: 7px;
-}
-*/
 
 .title,
 .inner-header-title {
@@ -100,14 +122,9 @@ a {
 
 .banners .title,
 .goods .title,
-.seo-container .title {
+.seo-container .title,
+.text-prod {
   text-align: center;
-}
-
-.title-small {
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 700;
 }
 
 .title-prod {
@@ -115,53 +132,12 @@ a {
   line-height: 24px;
   font-weight: 700;
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .contacts-container .title-prod,
-.call-me a
- {
+.call-me a {
   text-align: left;
-}
-
-.ice-cream-demo {
-   position: relative;
-}
-
-.ice-cream-demo img {
-  z-index: 1;
-}
-
-.circle-wide {
-   width: 312px;
-   height: 312px;
-   background: #FFCBD8;
-   border-radius: 50%;
-   position: absolute;
-   top: 102px;
-   z-index: -1;
-}
-
-/*Задать top*/
-.circle-narrow {
-  width: 100px;
-  height: 100px;
-  background: #FFCBD8;
-  opacity: 40%;
-  border-radius: 50%;
-  position: absolute;
-  top: 25px;
-  z-index: -1;
-}
-
-.ice-cream-title {
-  font-size: 36px;
-  line-height: 46px;
-  font-weight: 900;
-}
-
-.ice-cream-description {
-  font-size: 18px;
-  line-height: 24px;
 }
 
 .choosen,
@@ -183,37 +159,91 @@ a {
   justify-content: flex-start;
   align-items: center;
   height: 104px;
+  margin-bottom: 21px;
 }
 
 .navigation {
   display: flex;
-  justify-content: space-between;
   width: 100%;
+  margin: 0 auto;
   padding-top: 34px;
   padding-bottom: 34px;
 }
 
+.logo {
+  margin-right: 16px;
+}
+
 .navigation-list {
-  max-width: 580px; /* Оставляем на случай, если добавятся колонки?*/
+  max-width: 585px;
   display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   flex-direction: row;
   align-items: center;
 }
 
-.navigation-item {
-  padding-left: 16px;
-  padding-right: 16px;
+.navigation-link {
+  padding: 8px 16px;
 }
 
 .navigation-user {
-  max-width: 275px; /* Аналогично задаем в случае увеличения .navigation-user?*/
+  margin-left: auto;
 }
 
-/*Задать размеры боксов*/
-/*Добавить отступы между текстом*/
-/*И между секциями*/
-/*Выравнивание картинок относително боксов*/
-/*Выравнивание текста по центру в карточках товара*/
+.call-me:nth-of-type(1) {
+  padding-right: 10px;
+  font-weight: 700;
+}
+
+.navigation-link-small {
+  padding: 7px;
+}
+
+.link-small-search,
+.link-small-login,
+.link-small-basket {
+  position: relative;
+  padding: 6px 16px;
+}
+
+.link-small-search::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background: url("../img/icons/icon-nav-search.svg") no-repeat;
+  width: 18px;
+  height: 18px;
+  float: left;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.link-small-login::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background: url("../img/icons/icon-nav-log.svg") no-repeat;
+  width: 18px;
+  height: 18px;
+  float: left;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.link-small-basket::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background: url("../img/icons/icon-nav-cart.svg") no-repeat;
+  width: 18px;
+  height: 18px;
+  float: left;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .first-screen,
 .first-screen-bottom {
   width: 100%;
@@ -221,21 +251,28 @@ a {
 
 .slider-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  align-content: center;
 }
 
 .slider-list-item:nth-of-type(1) {
   width: 470px;
+  margin-left: 70px;
 }
 
 .slider-list-item:nth-of-type(2) {
-  width: 348px;
+  width: 312px;
 }
 
 .slider-list-item:nth-of-type(3),
 .slider-list-item:nth-of-type(4) {
-  width: 100px; /*Или задать размера картинки, ведь энивей используеи absolute для circle? */
+  width: 100px;
+}
+
+.button-white,
+.button-red {
+  text-align: center;
 }
 
 .first-screen-bottom {
@@ -243,13 +280,47 @@ a {
   justify-content: space-between;
 }
 
-.first-screen,
-.banners,
-.goods,
-.seo,
-.news-and-subscription,
-.delivery {
-  margin-bottom: 80px;
+.ice-cream-title {
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 900;
+  margin-bottom: 24px;
+}
+
+.ice-cream-description {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 60px;
+}
+
+.ice-cream-demo {
+   position: relative;
+   width: auto;
+}
+
+.ice-cream-demo img {
+  z-index: 1;
+}
+
+.circle-wide {
+   width: 312px;
+   height: 312px;
+   background: #FFCBD8;
+   border-radius: 50%;
+   position: absolute;
+   top: 102px;
+   z-index: -1;
+}
+
+.circle-narrow {
+  width: 100px;
+  height: 100px;
+  background: #FFCBD8;
+  opacity: 40%;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  z-index: -1;
 }
 
 .slider-pagination {
@@ -278,10 +349,63 @@ a {
 }
 
 .banner {
+  display: flex;
+  justify-content: space-between;
   width: 570px;
-  height: 268px;
+  min-height: 268px;
   background-color: #FF7799;
   border-radius: 16px;
+}
+
+.banner-words:nth-of-type(1) {
+  max-width: 345px;
+}
+
+.banner-words:nth-of-type(2) {
+  max-width: 336px;
+}
+
+.banner-raspberry,
+.banner-marshmallow {
+  position: relative;
+}
+
+.banner-raspberry img {
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+}
+
+.banner-marshmallow img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+
+.title-small {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.title-small:nth-of-type(1),
+.title-small:nth-of-type(2) {
+  margin: 40px auto auto 40px;
+}
+
+.banner .text {
+  margin: 16px auto 44px 40px;
+}
+
+.banner .button-white {
+  margin-left: 72px;
+}
+
+.empty:nth-of-type(1) {
+  margin-bottom: 39px;
+  padding: 1px;
+  /*В сумме отступ снизу равняется 40px*/
 }
 
 .product {
@@ -294,9 +418,23 @@ a {
 
 .product-card {
   width: 270px;
+  height: 332px;
   border-radius: 8px;
   position: relative;
   z-index: 1;
+  /* Сделать отступ, чтобы в случае переполнения был sexy-отступ между рядами?
+  margin-bottom: 23px;*/
+}
+
+.product-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 40px 28px 40px ;
+}
+
+.product-card-link img {
+  position: relative;
+  left: 50px;
 }
 
 .backing {
@@ -327,18 +465,6 @@ a {
   display: inline-flex;
   width: 500px;
 }
-
-/* вариант с гридами
-.advantages {
-  display: grid;
-  grid-row-gap: 25px; итого 50 пикселей
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2,1fr);
-}
-
-.adventage {
-  display: flex;
-}*/
 
 .news-and-subscription {
   display: flex;
@@ -468,4 +594,25 @@ a {
 .catalog-filter-list:nth-of-type(1) {
   display: flex;
   justify-content: space-between;
+}
+
+.pagination {
+  display: flex;
+  width: 100%;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.paginataion-list {
+  display: flex;
+  margin-left: auto;
+  padding: 0;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.pagination-more {
+  margin-left: auto;
 }
