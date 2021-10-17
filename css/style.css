@@ -4,6 +4,7 @@
 /*Выравнивание картинок относително боксов*/
 /*Выравнивание текста по центру в карточках товара*/
 /*Отрабоать отступы в навигации*/
+/*Оцентровать текст в формах*/
 @font-face {
   font-family: "Inter";
   font-style: normal;
@@ -382,15 +383,13 @@ h3 {
   bottom: 0;
 }
 
-
 .title-small {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
 }
 
-.title-small:nth-of-type(1),
-.title-small:nth-of-type(2) {
+.banner-words h3 {
   margin: 40px auto auto 40px;
 }
 
@@ -432,12 +431,25 @@ h3 {
   margin: 20px 40px 28px 40px ;
 }
 
+.add-to-basket::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background: url("../img/icons/icon-pink-cart.svg") no-repeat;
+  width: 32px;
+  height: 32px;
+  float: left;
+  bottom: 20px;
+  right: 40px;
+  transform: translateY(-50%);
+}
+
 .product-card-link img {
   position: relative;
   left: 50px;
 }
 
-.backing {
+.backing-card {
   position: absolute;
   width: 270px;
   height: 281px;
@@ -447,23 +459,49 @@ h3 {
   bottom: 0;
 }
 
+.seo {
+  height: 480px;
+  background-image: url('../img/ceo-waffle-bg.jpg');
+  background-repeat: repeat;
+  background-size: 100%;
+  border-radius: 16px;
+}
+
 .seo-container {
   width: 1122px;
   height: 432px;
   background-color: #FFFFFF;
   border-radius: 16px;
-  margin: 0 auto;
+  position: relative;
+  top: 24px;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+}
+
+.seo-container .title {
+  margin-top: 56px;
+}
+
+.plug {
+  padding: 1px;
+  width: 100%;
 }
 
 .advantages {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .advantage {
   display: inline-flex;
-  width: 500px;
+  width: 513px;
+  margin-bottom: 40px;
+}
+
+.advantage .text {
+  padding-left: 16px;
 }
 
 .news-and-subscription {
@@ -471,17 +509,88 @@ h3 {
   justify-content: space-between;
 }
 
-.news,
-.subscription {
+.news {
   width: 570px;
   height: 216px;
   background-color: #FFFFFF;
   border-radius: 16px;
 }
 
+.subscription {
+  width: 570px;
+  height: 220px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  background-image: url('../img/news-and-subs/ice-cream-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.text-blog {
+  margin: 32px auto 12px 32px;
+}
+
+.news a {
+  margin-left: 32px;
+}
+
+.subscription {
+  background-image: url('../img/news-and-subs/post-bg.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 16px;
+  position: relative;
+  z-index: -1;
+}
+
+.subscription-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscription-container .text {
+  margin: 32px 32px 42px 32px;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 25px;
+}
+
+.subscription-form input,
+.delivery-form-date input,
+.delivery-form-phone input,
+.delivery-form-address input {
+  width: inherit;
+  height: 48px;
+  border: 1px solid #B9B9B9;
+  border-radius: 4px;
+}
+
+.subscription-form input {
+  width: 332px;
+}
+
+.backing-sub {
+  position: absolute;
+  width: 558px;
+  height: 208px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  z-index: -1;
+  top: 6px;
+  left: 6px;
+}
+
 /*После разметки формы заменить значение высоты на автоматическое*/
 .delivery {
-  height: 534px;
+  height: auto;
   background-image: url('../img/delivery-bg.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
@@ -492,37 +601,107 @@ h3 {
 }
 
 .delivery-about {
-  width: 371px;
-  align-items: center;
+  width: 375px;
+  margin: 0 auto 0 100px;
 }
 
-.delivery-form {
+.delivery-form-inputs {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  position: relative;
+  margin: 64px 64px 64px auto;
+}
+
+.delivery-form-inputs .text {
+  width: 380px;
+  margin: 40px 80px auto 40px;
+}
+
+.delivery-form-date {
+  width: 117px;
+  height: 76px;
+  margin: 32px 16px 20px 40px;
+}
+
+.delivery-form-phone {
+  width: 287px;
+  height: 78px;
+  margin: 32px 40px 20px auto;
+}
+
+.delivery-form-address {
   width: 420px;
+  height: 78px;
+  margin: auto 40px 32px 40px;
+}
+
+.delivery-form-inputs .button-red {
+  flex-grow: 1;
+  margin: auto 173px 42px 175px;
 }
 
 /*После разметки контактов заменить значение высоты на автоматическое*/
-.contacts {
+.feedback {
   height: 492px;
   background-image: url('../img/feedback-bg.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 16px;
+}
+
+.contacts {
+  width: 343px;
+  height: 364px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  background-color: #FCFCFC;
+  border-radius: 16px;
+  top: 64px;
+  bottom: 64px;
+  left: 64px;
+}
+
+.contacts-text {
+  padding-top: 40px;
+  padding-bottom: 12px;
+  padding-left: 40px;
+}
+
+.contacts .title-prod {
+  text-align: left;
+  padding-bottom: 24px;
+  padding-left: 40px;
   margin: 0;
 }
 
-.contacts-container {
-  width: 343px;
-  height: 364px;
-  display: inline-block;
-  background-color: #FCFCFC;
-  border-radius: 16px;
-  margin-top: 64px;
-  margin-right: 763px;
-  margin-bottom: 64px;
-  margin-left: 64px;
+.contacts .text {
+  padding-bottom: 12px;
+  padding-left: 40px;
+}
+
+.call-me {
+  padding-left: 40px;
+}
+
+.contacts .text-small {
+  padding-bottom: 32px;
+  padding-left: 40px;
+}
+
+.contacts-button {
+  text-align: center;
 }
 
 .footer {
+  margin-top: 48px;
+  margin-bottom: 57px;
   display: flex;
   justify-content: space-between;
   align-items: center;
