@@ -75,7 +75,6 @@ h3 {
 
 .first-screen,
 .banners,
-.goods,
 .seo,
 .news-and-subscription,
 .delivery {
@@ -214,6 +213,10 @@ h3 {
   position: absolute;
   display: block;
   background: url("../img/icons/icon-nav-search.svg") no-repeat;
+  background-position: center;
+  background-color: #FFCBD8;
+  padding: 8px;
+  border-radius: 50%;
   width: 18px;
   height: 18px;
   float: left;
@@ -226,6 +229,10 @@ h3 {
   position: absolute;
   display: block;
   background: url("../img/icons/icon-nav-log.svg") no-repeat;
+  /*background-position: center;
+  background-color: #FFCBD8;
+  padding: 6px auto;*/
+  border-radius: 50%;
   width: 18px;
   height: 18px;
   float: left;
@@ -407,6 +414,10 @@ h3 {
   /*В сумме отступ снизу равняется 40px*/
 }
 
+.goods {
+  margin-bottom: 40px;
+}
+
 .product {
   display: flex;
   flex-wrap: wrap;
@@ -417,46 +428,29 @@ h3 {
 
 .product-card {
   width: 270px;
-  height: 332px;
+  min-height: 281px;
+  background-color: #FFFFFF;
   border-radius: 8px;
   position: relative;
   z-index: 1;
-  /* Сделать отступ, чтобы в случае переполнения был sexy-отступ между рядами?
-  margin-bottom: 23px;*/
+  margin-bottom: 40px;
 }
 
 .product-card-bottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 20px 40px 28px 40px ;
 }
 
-.add-to-basket::before {
-  content: "";
-  position: absolute;
-  display: block;
-  background: url("../img/icons/icon-pink-cart.svg") no-repeat;
-  width: 32px;
-  height: 32px;
-  float: left;
-  bottom: 20px;
-  right: 40px;
-  transform: translateY(-50%);
-}
-
 .product-card-link img {
-  position: relative;
+  position: absolute;
   left: 50px;
+  top: -50px;
 }
 
-.backing-card {
-  position: absolute;
-  width: 270px;
-  height: 281px;
-  border-radius: 8px;
-  background-color: #FFFFFF;
-  z-index: -1;
-  bottom: 0;
+.product-card-link .title-prod {
+  margin-top: 120px;
 }
 
 .seo {
