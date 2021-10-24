@@ -39,7 +39,8 @@
             <a class="navigation-link" href="#"><span class="link-small-login">Вход</span></a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#"><span class="link-small-basket">Корзина</span></a>
+              <!-- Потом поменяем на реальное содержимое -->
+              <a class="navigation-link" href="#"><span class="link-small-basket">Пусто</span></a>
           </li>
         </ul>
       </nav>
@@ -156,6 +157,7 @@
 
       <article class="goods">
         <h2 class="title">Попробуйте самые популярные <br>вкусы нашего мороженого</h2>
+        <div class="empty"></div>
         <ol class="product reset-list">
           <li class="product-card">
             <a class="product-card-link" href="#">
@@ -216,7 +218,7 @@
         </ol>
       </article>
 
-    <!-- ЗАКОНЧИТЬ ТЕСТ НА ПЕРЕПОЛНЕНИЕ-->
+    <!-- ЗАКОНЧИТЬ ТЕСТ НА ПЕРЕПОЛНЕНИЕ max-width: 100%?-->
       <section class="seo">
         <div class=seo-container>
           <div class="plug"></div>
@@ -247,7 +249,6 @@
         <article class="news">
           <h2 class="visually-hidden">Новости</h2>
           <p class="text-blog">Новое в нашем блоге</p>
-          <!--<div class="plug"></div>-->
           <a class="title-small" href="#">10 способов сервировки <br>фруктовых щербетов <br>к столу</a>
         </article>
         <article class="subscription">
@@ -275,6 +276,9 @@
               <span class="form-label form-label-icon">
                 <label for="appointment-date">Дата</label>
                 <button class="info" type="button">
+                  <!-- Или просто вставить изображением и ограничиться стилями в паддинг и бордер
+                  <img src="img/icons/icon-form-info.svg" alt="Иконка информации" height="14" width="14" aria-hidden="true">
+                -->
                   <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                 </button>
               </span>
@@ -283,13 +287,13 @@
             <p class="delivery-form-phone">
               <span class="form-label form-label-icon">
                 <label for="appointment-phone">Телефон</label>
-                <button class="info" type="button"></button>
               </span>
               <input type="text" id="appointment-phone" name="appointment-phone" placeholder="+7 800 999-00-00">
             </p>
             <p class="delivery-form-address">
               <span class="form-label form-label-icon">
                 <label for="appointment-address">Адрес</label>
+
                 <button class="info" type="button">
                   <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                 </button>
