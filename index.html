@@ -7,6 +7,7 @@
     <meta name="keywords" content="глэйси, мороженое, щербет, авторское, доставка, Питер">
     <title>Магазин Глейси</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico"><!-- 32×32 -->
   </head>
   <body>
     <header class="page-header">
@@ -15,6 +16,22 @@
         <ul class="navigation-list reset-list">
           <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">Каталог</a>
+            <!-- В div ниже можно добавить класс popover-open -->
+            <div class="popover-types">
+              <button class="popover-types-close">
+                Каталог
+                <span class="visually-hidden">Закрыть окно вкусов</span>
+              </button>
+              <div class="popover-content">
+                <h2 class="popover-types-title">Новинки</h2>
+                <ul class="types-list">
+                  <li class="types-item"><span>Сливочное</span></li>
+                  <li class="types-item"><span>Щербеты</span></li>
+                  <li class="types-item"><span>Фруктовый лед</span></li>
+                  <li class="types-item"><span>Мелорин</span></li>
+                </ul>
+              </div>
+            </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">Доставка и оплата</a>

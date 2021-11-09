@@ -7,6 +7,7 @@
     <meta name="keywords" content="глэйси, мороженое, щербет, вкусы, авторское, доставка, Питер">
     <title>Каталог</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico"><!-- 32×32 -->
   </head>
 
   <body>
@@ -18,6 +19,22 @@
         <ul class="navigation-list reset-list">
           <li class="navigation-item">
             <a class="navigation-link current-page" href="catalog.html">Каталог</a>
+            <!-- В div ниже можно добавить класс popover-open -->
+            <div class="popover-types">
+              <button class="popover-types-close">
+                Каталог
+                <span class="visually-hidden">Закрыть окно вкусов</span>
+              </button>
+              <div class="popover-content">
+                <h2 class="popover-types-title">Новинки</h2>
+                <ul class="types-list">
+                  <li class="types-item current-type"><span>Сливочное</span></li>
+                  <li class="types-item"><span>Щербеты</span></li>
+                  <li class="types-item"><span>Фруктовый лед</span></li>
+                  <li class="types-item"><span>Мелорин</span></li>
+                </ul>
+              </div>
+            </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">Доставка и оплата</a>
@@ -52,9 +69,53 @@
             <a class="navigation-link navigation-link-cart" href="#">
               <svg class="navigation-icon" aria-hidden="true" focusable="false" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.31 1.49a.67.67 0 1 0 0 1.33h2.06l.54 2.7.01.05 1.1 5.44a1.97 1.97 0 0 0 1.96 1.6h6.32a1.97 1.97 0 0 0 1.96-1.6l1.05-5.47a.67.67 0 0 0-.66-.8H5.12l-.55-2.71a.67.67 0 0 0-.65-.54h-2.6Zm5.01 9.26L5.4 6.08h9.46l-.9 4.68a.64.64 0 0 1-.63.5H6.96a.64.64 0 0 1-.64-.5ZM5.21 15.2a1.32 1.32 0 1 1 2.64 0 1.32 1.32 0 0 1-2.64 0Zm7.17 0a1.32 1.32 0 1 1 2.64 0 1.32 1.32 0 0 1-2.64 0Z" fill="#2D3440"/>
-              </svg>Пусто
+              </svg>2 товара
               <span class="visually-hidden">Корзина</span>
             </a>
+            <!-- В div ниже можно добавить класс popover-open -->
+            <div class="popover-catalog">
+              <button class="popover-catalog-close">
+                2 товара
+                <span class="visually-hidden">Закрыть окно корзины</span>
+              </button>
+              <div class="popover-content">
+                <h2 class="popover-catalog-title">Корзина</h2>
+                <ul class="popover-catalog-list">
+                  <li class="catalog-item">
+                    <img src="img/goods/raspberry.png" alt="Малиновый шарик мороженого" height="46" width="46">
+                    <dl class="sub-catalog">
+                      <dt class="catalog-item-title">Малинка</dt>
+                      <dd class="catalog-item-price-per-weight">1 кг х 310 ₽</dd>
+                    </dl>
+                    <p class="catalog-item-price">310 ₽</p>
+                    <button class="cross-catalog" type="reset">
+                      <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.803 4.138a.667.667 0 1 0-.943-.943L8 7.056l-3.862-3.86a.667.667 0 1 0-.943.942L7.056 8l-3.86 3.861a.667.667 0 1 0 .942.943L8 8.942l3.861 3.861a.667.667 0 1 0 .943-.943L8.942 8l3.861-3.862Z" fill="#2D3440" opacity="1"/>
+                      </svg>
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                  <li class="catalog-item">
+                    <img src="img/goods/bubble-gum.png" alt="Шарик мороженого бабл-гам" height="46" width="46">
+                    <dl class="sub-catalog">
+                      <dt class="catalog-item-title">Бабл-гам</dt>
+                      <dd class="catalog-item-price-per-weight">1,5 кг х 320 ₽</dd>
+                    </dl>
+                    <p class="catalog-item-price">480 ₽</p>
+                    <button class="cross-catalog" type="reset">
+                      <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.803 4.138a.667.667 0 1 0-.943-.943L8 7.056l-3.862-3.86a.667.667 0 1 0-.943.942L7.056 8l-3.86 3.861a.667.667 0 1 0 .942.943L8 8.942l3.861 3.861a.667.667 0 1 0 .943-.943L8.942 8l3.861-3.862Z" fill="#2D3440" opacity="1"/>
+                      </svg>
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <a class="button-red popover-catalog-button" href="#">
+                <span>Оформить заказ</span>
+              </a>
+              <span class="catalog-total-price">Итого: 790 ₽</span>
+            </div>
           </li>
         </ul>
       </nav>
