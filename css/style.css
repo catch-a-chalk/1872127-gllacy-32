@@ -94,7 +94,8 @@ fieldset {
 .navigation-link,
 .text-blog,
 ::placeholder,
-.pagination-link {
+.pagination-link,
+.login-form-email input {
   line-height: 20px;
 }
 
@@ -110,8 +111,7 @@ fieldset {
 .select-control,
 .range-toggle,
 .catalog-filter-label,
-.control-label,
-.types-item {
+.control-label {
   font-size: 14px;
   line-height: 20px;
 }
@@ -309,9 +309,11 @@ a[href^="tel:"] {
   padding-bottom: 8px;
 }
 
-.types-item span {
+.types-item a {
   padding-left: 16px;
   padding-right: 15px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .types-item:hover {
@@ -382,12 +384,6 @@ a[href^="tel:"] {
   cursor: pointer;
 }
 
-/* НЕ РАБОТАЕТ
-.button-cross:hover svg path {
-  fill: rgba(45, 52, 64, 1);
-}
-*/
-
 .popover-search-close {
   position: absolute;
   top: -40px;
@@ -433,13 +429,14 @@ a[href^="tel:"] {
 .popover-login-close {
   position: absolute;
   top: -40px;
-  right: 0;
+  right: 0px;
   padding: 8px 16px;
   border-radius: 26px;
   background-color: rgba(252, 252, 252, 1);
   border: none;
   font-family: "Inter", sans-serif;
   font-size: 14px;
+  line-height: 20px;
   font-weight: 400;
 }
 
@@ -458,6 +455,7 @@ a[href^="tel:"] {
 .login-form-password input {
   padding-left: 16px;
   padding-right: 16px;
+  font-size: 16px;
 }
 
 .login-form-email:hover input,
@@ -556,6 +554,7 @@ a[href^="tel:"] {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 400;
+  line-height: 20px;
 }
 
 .popover-cart .popover-cart-close {
@@ -831,27 +830,23 @@ a[href^="tel:"] {
   margin-left: 15px;
 }
 
-.social-icon {
-  border: 2px solid rgba(252, 252, 252, 0.2);
+.social-right-icon a {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  outline: 2px solid rgba(252, 252, 252, 0.2);
   border-radius: 16px;
 }
 
-.social-icon:hover {
-  border: 2px solid rgba(252, 252, 252, 0.2);
+.social-right-icon a:hover {
+  background-color: rgba(45, 52, 64, 1);
+  outline: 2px solid rgba(252, 252, 252, 0.2);
 }
 
-.social-icon:hover path {
-  fill: rgba(45, 52, 64, 1);
+.social-right-icon a:focus {
+  background-color: rgba(45, 52, 64, 1);
+  outline: 2px solid rgba(45, 52, 64, 1);
 }
-
-/* НЕ РАБОТАЕТ
-.social-icon:focus {
-  border: 2px solid rgba(45, 52, 64, 1);
-}
-.social-icon:focus path {
-  fill: rgba(45, 52, 64, 1);
-}
-*/
 
 .banners-box {
   display: flex;
@@ -1453,7 +1448,8 @@ width: 442px;
 height: 48px;
 box-sizing: border-box;
 font: inherit;
-border: 1px solid rgba(185, 185, 185, 1);
+outline: 1px solid rgba(185, 185, 185, 1);
+border: none;
 border-radius: 4px;
 padding-left: 16px;
 }
@@ -1463,7 +1459,8 @@ width: 442px;
 height: 149px;
 box-sizing: border-box;
 font: inherit;
-border: 1px solid rgba(185, 185, 185, 1);
+outline: 1px solid rgba(185, 185, 185, 1);
+border: none;
 border-radius: 4px;
 padding-top: 14px;
 padding-left: 16px;
@@ -1477,12 +1474,12 @@ textarea {
 
 .feedback-form-field:hover,
 .feedback-form-wide:hover {
-  border: 1px solid rgba(45, 52, 64, 1);
+  outline: 1px solid rgba(45, 52, 64, 1);
 }
 
 .feedback-form-field:focus,
 .feedback-form-wide:focus {
-  border: 2px solid rgba(45, 52, 64, 1);
+  outline: 2px solid rgba(45, 52, 64, 1);
 }
 
 .feedback-form-field:disabled,
@@ -1493,17 +1490,17 @@ textarea {
 
 .feedback-form-field:invalid,
 .feedback-form-wide:invalid {
-  border: 1px solid rgba(234, 84, 84, 1);
+  outline: 1px solid rgba(234, 84, 84, 1);
 }
 
 .feedback-form-field:invalid:hover,
 .feedback-form-wide:invalid:hover {
-  border: 2px solid rgba(234, 84, 84, 1);
+  outline: 2px solid rgba(234, 84, 84, 1);
 }
 
 .feedback-form-field:invalid:focus,
 .feedback-form-wide:invalid:focus {
-  border: 2px solid rgba(234, 84, 84, 1);
+  outline: 2px solid rgba(234, 84, 84, 1);
 }
 
 .feedback-form button {
@@ -1831,123 +1828,81 @@ textarea {
 .control-mark {
   box-sizing: border-box;
   position: absolute;
-  width: 20px;
-  height: 20px;
-  border: 2px solid rgba(45, 52, 64, 1);
-  top: 2px;
+  width: 16px;
+  height: 16px;
+  top: 3px;
   left: 0;
   border-radius: 2px;
 }
 
-.control:hover .control-mark {
-  border-color: rgba(255, 255, 255, 1);
-}
-
-.control-input:disabled + .control-mark {
-  border-color: rgba(45, 52, 64, 0.4);
-}
-
-.control-input[type="checkbox"]:checked + .control-mark {
-  border-top-style: hidden;
-  border-right-style: hidden;
-}
-
+.control-input[type="checkbox"]:not(:checked) + .control-mark::before,
 .control-input[type="checkbox"]:checked + .control-mark::before,
-.control-input[type="checkbox"]:checked + .control-mark::after {
-  content: "";
-  position: absolute;
-  top: 7px;
+.control-input[type="checkbox"]:not(:checked):hover + .control-mark::before,
+.control-input[type="checkbox"]:checked:hover + .control-mark::before,
+.control-input[type="checkbox"]:not(:checked):disabled + .control-mark::before,
+.control-input[type="checkbox"]:checked:disabled + .control-mark::before {
+  top: -1px;
   left: 2px;
-  height: 2px;
-  background-color: rgba(45, 52, 64, 1);
-  border-radius: 2px;
+  position: absolute;
 }
 
-.control-input[type="checkbox"]:checked:hover + .control-mark::before,
-.control-input[type="checkbox"]:checked:hover + .control-mark::after {
-  background-color: rgba(255, 255, 255, 1);
+.control-input[type="checkbox"]:not(:checked) + .control-mark::before {
+  content: url('../img/icons/icon-check-off.svg');
 }
 
 .control-input[type="checkbox"]:checked + .control-mark::before {
-  width: 6px;
-  transform: rotate(45deg) translateX(2px) translateY(1px);
+  content: url('../img/icons/icon-check-on.svg');
 }
 
-.control-input[type="checkbox"]:checked + .control-mark::after {
-  width: 16px;
-  transform: rotate(-45deg) translateX(3px) translateY(1px);
+.control-input[type="checkbox"]:not(:checked):hover + .control-mark::before {
+  content: url('../img/icons/icon-check-off-hover.svg');
 }
 
-.control-input[type="checkbox"]:disabled + .control-mark::before,
-.control-input[type="checkbox"]:disabled + .control-mark::after {
-  background-color: rgba(45, 52, 64, 0.4);
+.control-input[type="checkbox"]:checked:hover + .control-mark::before {
+  content: url('../img/icons/icon-check-on-hover.svg');
 }
 
-.control-input[type="checkbox"]:disabled:hover + .control-mark::before,
-.control-input[type="checkbox"]:disabled:hover + .control-mark::after {
-  background-color: rgba(45, 52, 64, 0.4);
+.control-input[type="checkbox"]:not(:checked):disabled + .control-mark::before {
+  content: url('../img/icons/icon-check-off-disabled.svg');
 }
 
-.control-border-top {
+.control-input[type="checkbox"]:checked:disabled + .control-mark::before {
+  content: url('../img/icons/icon-check-on-disabled.svg');
+}
+
+.control-input[type="radio"]:not(:checked) + .control-mark::before,
+.control-input[type="radio"]:checked + .control-mark::before,
+.control-input[type="radio"]:not(:checked):hover + .control-mark::before,
+.control-input[type="radio"]:checked:hover + .control-mark::before,
+.control-input[type="radio"]:not(:checked):disabled + .control-mark::before,
+.control-input[type="radio"]:checked:disabled + .control-mark::before {
+  top: 0;
+  left: 4px;
   position: absolute;
-  width: 14px;
-  height: 2px;
-  top: 2px;
-  left: 0;
-  background-color: rgba(45, 52, 64, 1);
-  border-radius: 2px;
-}
-
-.control:hover .control-border-top {
-  background-color: rgba(255, 255, 255, 1);
-}
-
-/*  НЕ РАБОТАЕТ
-.control-input:disabled + .control-border-top {
-  background-color: rgba(45, 52, 64, 0.4);
-}
-*/
-
-.control-border-right {
-  position: absolute;
-  width: 10px;
-  height: 2px;
-  top: 15px;
-  left: 14px;
-  transform: rotate(90deg);
-  background-color: rgba(45, 52, 64, 1);
-  border-radius: 2px;
-}
-
-.control:hover .control-border-right {
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.control-input[type="radio"] + .control-mark {
-  border-radius: 50%;
 }
 
 .control-input[type="radio"]:checked + .control-mark::before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 8px;
-  height: 8px;
-  background-color: rgba(45, 52, 64, 1);
-  border-radius: 50%;
+  content: url('../img/icons/icon-radio-on.svg');
+}
+
+.control-input[type="radio"]:not(:checked) + .control-mark::before {
+  content: url('../img/icons/icon-radio-off.svg');
 }
 
 .control-input[type="radio"]:checked:hover + .control-mark::before {
-  background-color: rgba(255, 255, 255, 1);
+  content: url('../img/icons/icon-radio-on-hover.svg');
 }
 
-.control-input[type="radio"]:focus + .control-mark {
-  border-color: rgba(255, 255, 255, 1);
+.control-input[type="radio"]:not(:checked):hover + .control-mark::before {
+  content: url('../img/icons/icon-radio-off-hover.svg');
 }
 
-.control-input[type="radio"]:focus + .control-mark::before {
-  background-color: rgba(255, 255, 255, 1);
+.control-input[type="radio"]:checked:disabled + .control-mark::before {
+  content: url('../img/icons/icon-radio-on-disabled.svg');
+}
+
+.control-input[type="radio"]:not(:checked):disabled + .control-mark::before {
+  content: url('../img/icons/icon-radio-off-disabled.svg');
 }
 
 .button-submit-filter {
