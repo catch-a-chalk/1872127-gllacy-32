@@ -29,7 +29,9 @@ body {
   font-weight: 400;
   color: rgba(45, 52, 64, 1);
   background-color: rgba(254, 175, 195, 1);
-  width: 1170px;
+  min-width: 1170px;
+  padding-left: 98px;
+  padding-right: 98px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -177,12 +179,14 @@ a[href^="tel:"] {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 104px;
+  min-height: 104px;
   margin-bottom: 21px;
 }
 
 .navigation {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
   padding-top: 34px;
@@ -194,7 +198,7 @@ a[href^="tel:"] {
 }
 
 .navigation-list {
-  max-width: 585px;
+  max-width: 500px;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -208,6 +212,10 @@ a[href^="tel:"] {
 }
 
 .navigation-link {
+  box-sizing: content-box;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 8px 16px;
   border-radius: 26px;
   font-size: 14px;
@@ -215,6 +223,7 @@ a[href^="tel:"] {
 
 .navigation-user {
   margin-left: auto;
+  max-width: 500px;
 }
 
 .navigation-user .navigation-item:not(:last-child) {
@@ -587,11 +596,14 @@ a[href^="tel:"] {
 .button-white,
 .button-red {
   box-sizing: content-box;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 12px 32px;
   text-align: center;
   cursor: pointer;
-  border-radius: 26px;
   outline: 4px solid rgba(255, 203, 216, 1);
+  border-radius: 26px;
   border: none;
   box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
 }
@@ -649,6 +661,7 @@ a[href^="tel:"] {
 
 .slider-list {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
   box-sizing: content-box;
@@ -850,16 +863,20 @@ a[href^="tel:"] {
 
 .banners-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .banner {
   display: flex;
-  justify-content: space-between;
-  width: 570px;
+  justify-content: center;
+  min-width: 570px;
   min-height: 268px;
   background-color: rgba(255, 119, 153, 1);
   border-radius: 16px;
+}
+
+.banner:nth-of-type(1) {
+  margin-right: 30px;
 }
 
 .banner-words:nth-of-type(1) {
@@ -917,11 +934,14 @@ a[href^="tel:"] {
 
 .goods {
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .product {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 270px);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 63px;
@@ -997,6 +1017,7 @@ button.add-to-basket {
 
 .seo {
   background-image: url('../img/ceo-waffle-bg.jpg');
+  min-width: 1170px;
   background-size: 100%;
   border-radius: 16px;
   padding: 24px;
@@ -1004,7 +1025,6 @@ button.add-to-basket {
 
 .seo-container {
   box-sizing: border-box;
-  width: 1122px;
   min-height: 432px;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 16px;
@@ -1022,17 +1042,20 @@ button.add-to-basket {
 }
 
 .advantages {
-  display: flex;
-  justify-content: space-around;
+  box-sizing: content-box;
+  display: inline-flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .advantage {
   display: inline-flex;
+  position: relative;
   margin-bottom: 40px;
 }
 
-.advantage-ice {
+.advantage-ice,
+.advantage-leaf {
   margin-left: 50px;
   margin-right: 5px;
 }
@@ -1043,7 +1066,7 @@ button.add-to-basket {
   width: 48px;
   height: 48px;
   position: absolute;
-  left: 30px;
+  left: -60px;
 }
 
 .advantage-cow::before {
@@ -1052,12 +1075,7 @@ button.add-to-basket {
   width: 48px;
   height: 48px;
   position: absolute;
-  left: 570px;
-}
-
-.advantage-leaf {
-  margin-left: 50px;
-  margin-right: 5px;
+  left: -60px;
 }
 
 .advantage-leaf::before {
@@ -1066,7 +1084,7 @@ button.add-to-basket {
   width: 48px;
   height: 48px;
   position: absolute;
-  left: 30px;
+  left: -60px;
 }
 
 .advantage-temp::before {
@@ -1075,34 +1093,35 @@ button.add-to-basket {
   width: 48px;
   height: 48px;
   position: absolute;
-  left: 570px;
+  left: -60px;
 }
 
 .advantage .text {
   text-align: left;
-  align-self: flex-end;
-  width: 450px;
+  /*align-self: flex-end;*/
+  width: 454px;
 }
 
 .news-and-subscription {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .news,
 .subscription {
+  box-sizing: border-box;
+  min-width: 570px;
+  min-height: 220px;
+  background-repeat: no-repeat;
+  background-size: 100%;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 16px;
-  width: 570px;
-  min-height: 220px;
 }
 
 .news {
-  box-sizing: border-box;
   background-image: url('../img/news-and-subs/ice-cream-bg.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%;
   padding: 33px 235px 33px 32px;
+  margin-right: 30px;
 }
 
 .text-blog {
@@ -1114,10 +1133,7 @@ button.add-to-basket {
 }
 
 .subscription {
-  box-sizing: border-box;
   background-image: url('../img/news-and-subs/post-bg.png');
-  background-repeat: no-repeat;
-  background-size: 100%;
   border-radius: 16px;
   padding: 6px;
 }
@@ -1176,41 +1192,49 @@ button.add-to-basket {
   border: 2px solid rgba(234, 84, 84, 1);
 }
 
+.subscription-form button {
+  margin-left: 24px;
+}
+
 .delivery {
-  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 534px;
   background-image: url('../img/delivery-bg.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .delivery-about {
   width: 375px;
-  margin: 0 auto 0 100px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.delivery-about .title {
+  margin-bottom: 24px;
 }
 
 .delivery-form {
   box-sizing: border-box;
   width: 500px;
-  height: 406px;
-  margin-top: 64px;
-  margin-right: 64px;
-  margin-bottom: 64px;
-  box-shadow: 0px 15px 40px 0 rgba(45, 52, 64, 0.12);
+  min-height: 406px;
+  margin: 64px;
 }
 
 .delivery-form-inputs {
   box-sizing: border-box;
-  width: 500px;
-  height: 406px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 15px 40px 0 rgba(45, 52, 64, 0.12);
   border-radius: 8px;
   position: relative;
   padding: 40px 40px 42px 40px;
@@ -1218,21 +1242,26 @@ button.add-to-basket {
 
 .delivery-form-inputs .text {
   width: 390px;
+  margin-bottom: 32px;
+}
+
+.delivery-form-date,
+.delivery-form-phone,
+.delivery-form-address {
+  min-height: 78px;
+  margin-bottom: 20px;
 }
 
 .delivery-form-date {
   width: 117px;
-  height: 76px;
 }
 
 .delivery-form-phone {
   width: 287px;
-  height: 78px;
 }
 
 .delivery-form-address {
   width: 420px;
-  height: 78px;
 }
 
 .delivery-form-date input,
@@ -1240,7 +1269,7 @@ button.add-to-basket {
 .delivery-form-address input {
   width: inherit;
   font: inherit;
-  height: 48px;
+  min-height: 48px;
   border: 1px solid rgba(185, 185, 185, 1);
   border-radius: 4px;
 }
@@ -1293,24 +1322,26 @@ button.add-to-basket {
 }
 
 .feedback {
-  height: 492px;
+  box-sizing: border-box;
+  min-height: 492px;
   background-image: url('../img/feedback-bg.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 16px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  padding-left: 64px;
 }
 
 .contacts {
   width: 343px;
+  box-sizing: border-box;
   margin: 0;
-  padding-top: 40px;
+  padding: 40px;
   list-style: none;
   position: relative;
   background-color: rgba(252, 252, 252, 1);
   border-radius: 16px;
-  top: 64px;
-  bottom: 64px;
-  left: 64px;
   box-shadow: 0px 15px 40px 0 rgba(45, 52, 64, 0.12);
 }
 
@@ -1332,12 +1363,11 @@ button.add-to-basket {
 }
 
 .contacts-button {
-  padding-bottom: 53px;
+  margin: 0 auto;
 }
 
 .footer {
-  margin-top: 48px;
-  margin-bottom: 57px;
+  margin: 48px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
