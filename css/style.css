@@ -58,7 +58,7 @@ button {
 fieldset {
   border: none;
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 13px;
   padding: 0;
 }
 
@@ -126,6 +126,7 @@ fieldset {
 .catalog-total-price {
   font-weight: 700;
   line-height: 20px;
+  font-size: 16px;
 }
 
 .title,
@@ -142,12 +143,13 @@ fieldset {
   text-align: center;
 }
 
-.title-prod {
+.title-prod,
+.price {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 8px;
+  margin-bottom: 9px;
 }
 
 .contacts-container .title-prod {
@@ -158,6 +160,13 @@ a[href^="tel:"] {
   text-align: left;
   font-weight: 700;
   line-height: 20px;
+}
+
+.call-me {
+  text-align: left;
+  font-weight: 700;
+  line-height: 24px;
+  font-size: 20px;
 }
 
 .choosen,
@@ -180,25 +189,31 @@ a[href^="tel:"] {
   justify-content: flex-start;
   align-items: center;
   min-height: 104px;
-  margin-bottom: 21px;
+  margin-bottom: 8px;
 }
 
 .navigation {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
   width: 100%;
   margin: 0 auto;
-  padding-top: 10px;
+  padding-top: 15px;
   padding-bottom: 34px;
+}
+
+.navigation img {
+  padding-top: 1px;
 }
 
 .logo {
   margin-right: 16px;
 }
 
-.navigation-list {
-  max-width: 500px;
+.navigation-list,
+.navigation-user {
+  max-width: 510px;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -216,14 +231,20 @@ a[href^="tel:"] {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 8px 16px;
+  padding: 6px 16px;
+  margin-top: 4px;
+  margin-left: -1px;
   border-radius: 26px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .navigation-user {
-  margin-left: auto;
-  max-width: 500px;
+  font-size: 14px;
+  /*margin-left: 200px;*/
+}
+
+.navigation-user .navigation-link {
+  font-size: 14px;
 }
 
 .navigation-user .navigation-item:not(:last-child) {
@@ -662,18 +683,19 @@ a[href^="tel:"] {
 .slider-list {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  align-content: center;
   box-sizing: content-box;
 }
 
 .slider-list-item:nth-of-type(1) {
   width: 470px;
   margin-left: 70px;
+  padding-top: 120px;
 }
 
 .slider-list-item:nth-of-type(2) {
-  position: relative
+  position: relative;
+  left: 10px;
+  top: 3px;
 }
 
 .first-screen-bottom {
@@ -691,7 +713,7 @@ a[href^="tel:"] {
 .ice-cream-description {
   font-size: 18px;
   line-height: 24px;
-  margin-bottom: 60px;
+  margin-bottom: 45px;
 }
 
 .ice-cream-demo-large {
@@ -719,6 +741,8 @@ a[href^="tel:"] {
   position: relative;
   margin-bottom: 70px;
   text-align: center;
+  top: 136px;
+  left: -3px;
 }
 
 .slider-list-item:nth-of-type(3) {
@@ -739,7 +763,7 @@ a[href^="tel:"] {
   position: absolute;
   content: "";
   display: block;
-  top: 90px;
+  top: 75px;
   z-index: -1;
 }
 
@@ -750,7 +774,7 @@ a[href^="tel:"] {
   background: transparent;
   padding: 0;
   margin: 0;
-  top: 240px;
+  top: 237px;
   border: 2px solid rgba(252, 252, 252, 1);
   border-radius: 50px;
   background-color: rgba(252, 252, 252, 0.3);
@@ -761,7 +785,7 @@ a[href^="tel:"] {
 }
 
 .button-arrow:nth-of-type(1) {
-  left: 2px;
+  left: 3px;
 }
 
 .button-arrow:nth-of-type(2) {
@@ -809,8 +833,6 @@ a[href^="tel:"] {
   border-radius: 50%;
   color: white;
   padding: 6px 6px;
-  text-align: center;
-  text-decoration: none;
   display: inline-block;
   cursor: pointer;
 }
@@ -894,13 +916,13 @@ a[href^="tel:"] {
 
 .banner-raspberry img {
   position: absolute;
-  right: 15px;
+  right: 6px;
   bottom: 0;
 }
 
 .banner-marshmallow img {
   position: absolute;
-  right: 0;
+  right: -30px;
   bottom: 0;
 }
 
@@ -911,15 +933,15 @@ a[href^="tel:"] {
 }
 
 .banner-words {
-  padding: 40px 209px 40px 40px;
+  padding: 40px 199px 40px 40px;
 }
 
 .banner-words h3 {
-  margin-bottom: 16px;
+  margin-bottom: 17px;
 }
 
 .banner-words p {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .banner-words .button-white {
@@ -927,9 +949,8 @@ a[href^="tel:"] {
 }
 
 .empty:nth-of-type(1) {
-  margin-bottom: 39px;
+  margin-bottom: 49px;
   padding: 1px;
-  /*В сумме отступ снизу равняется 40px*/
 }
 
 .goods {
@@ -939,11 +960,12 @@ a[href^="tel:"] {
 }
 
 .product {
+  padding-top: 32px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 30px;
-  grid-row-gap: 63px;
+  grid-row-gap: 50px;
 }
 
 .product-card {
@@ -953,26 +975,26 @@ a[href^="tel:"] {
   position: relative;
   z-index: 1;
   margin-bottom: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 28px;
+  padding-left: 39px;
+  padding-right: 39px;
+  padding-bottom: 22px;
 }
 
 .product-card-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 17px;
 }
 
 .product-card-link img {
   position: absolute;
-  left: 50px;
-  top: -50px;
+  left: 39px;
+  top: -52px;
 }
 
 .product-card-link .title-prod {
-  margin-top: 120px;
+  margin-top: 133px;
 }
 
 button.add-to-basket {
@@ -1009,14 +1031,14 @@ button.add-to-basket {
 }
 
 .product-icon {
-  position: flex;
   justify-content: center;
   align-items: center;
 }
 
 .seo {
+  box-sizing: border-box;
   background-image: url('../img/ceo-waffle-bg.jpg');
-  min-width: 1170px;
+  max-width: 1170px;
   background-size: 100%;
   border-radius: 16px;
   padding: 24px;
@@ -1055,44 +1077,35 @@ button.add-to-basket {
 
 .advantage-ice,
 .advantage-leaf {
-  margin-left: 50px;
-  margin-right: 5px;
+  margin-left: 72px;
+  margin-right: 25px;
+}
+
+.advantage-ice::before,
+.advantage-cow::before,
+.advantage-leaf::before,
+.advantage-temp::before {
+  display: block;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: -64px;
 }
 
 .advantage-ice::before {
   content: url('../img/icons/icon-seo-ice.svg');
-  display: block;
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  left: -60px;
 }
 
 .advantage-cow::before {
   content: url('../img/icons/icon-seo-cow.svg');
-  display: block;
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  left: -60px;
 }
 
 .advantage-leaf::before {
   content: url('../img/icons/icon-seo-leaf.svg');
-  display: block;
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  left: -60px;
 }
 
 .advantage-temp::before {
   content: url('../img/icons/icon-seo-temp.svg');
-  display: block;
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  left: -60px;
 }
 
 .advantage .text {
@@ -1110,6 +1123,7 @@ button.add-to-basket {
   width: 50%;
   box-sizing: border-box;
   min-width: 570px;
+  min-height: 220px;
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: rgba(255, 255, 255, 1);
@@ -1132,6 +1146,7 @@ button.add-to-basket {
 
 .subscription {
   background-image: url('../img/news-and-subs/post-bg.png');
+  background-repeat: repeat;
   border-radius: 16px;
   padding: 6px;
 }
@@ -1143,10 +1158,11 @@ button.add-to-basket {
   background-color: rgba(255, 255, 255, 1);
   border-radius: 16px;
   padding: 26px;
+  padding-right: 20px;
 }
 
 .subscription-container .text {
-  margin-bottom: 19px;
+  margin-bottom: 22px;
 }
 
 .subscription-form {
@@ -1202,8 +1218,10 @@ button.add-to-basket {
   min-height: 534px;
   background-image: url('../img/delivery-bg.jpg');
   background-repeat: no-repeat;
+  background-color: rgba(243, 243, 243, 1);
   background-size: 100%;
   border-radius: 16px;
+  margin-top: -4px;
 }
 
 .delivery-about {
@@ -1216,7 +1234,7 @@ button.add-to-basket {
 }
 
 .delivery-about .title {
-  margin-bottom: 24px;
+  margin-bottom: 19px;
 }
 
 .delivery-form {
@@ -1276,7 +1294,7 @@ button.add-to-basket {
 .delivery-form-date input,
 .delivery-form-phone input,
 .delivery-form-address input {
-  margin-top: 8px;
+  margin-top: 5px;
   box-sizing: border-box;
   padding-left: 16px;
   padding-right: 16px;
@@ -1296,6 +1314,7 @@ button.add-to-basket {
 
 .delivery-form-inputs .button-red {
   margin: 0 auto;
+  margin-top: 9px;
   align-self: center;
 }
 
@@ -1324,6 +1343,7 @@ button.add-to-basket {
   box-sizing: border-box;
   min-height: 492px;
   background-image: url('../img/feedback-bg.jpg');
+  background-color: rgba(224, 189, 193, 1);
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 16px;
@@ -1340,7 +1360,7 @@ button.add-to-basket {
   list-style: none;
   position: relative;
   background-color: rgba(252, 252, 252, 1);
-  border-radius: 16px;
+  border-radius: 8px;
   box-shadow: 0px 15px 40px 0 rgba(45, 52, 64, 0.12);
 }
 
@@ -1350,11 +1370,11 @@ button.add-to-basket {
 
 .contacts .title-prod {
   text-align: left;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 }
 
 .contacts .text {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .contacts .text-small {
@@ -1369,13 +1389,13 @@ button.add-to-basket {
   margin: 48px auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .social-left {
   display: flex;
   flex-wrap: wrap;
   min-width: 220px;
+  padding-left: 5px;
 }
 
 .social-left-icon {
@@ -1384,10 +1404,13 @@ button.add-to-basket {
 
 .more {
   display: grid;
-  grid-row-gap: 8px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2,1fr);
   justify-content: center;
+}
+
+.more-information {
+  max-width: 190px;
 }
 
 .information-href {
@@ -1408,6 +1431,7 @@ button.add-to-basket {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin-right: 15px;
 }
 
 .modal-container {
@@ -1499,7 +1523,6 @@ textarea {
   resize: none;
   padding: 14px 16px;
 }
-
 
 .feedback-form-field:hover,
 .feedback-form-wide:hover {
@@ -1639,10 +1662,14 @@ textarea {
   overflow: hidden;
 }
 
+.inner-header-title {
+  margin-bottom: 35px;
+}
+
 .breadcrumbs {
   display: flex;
   justify-content: flex-start;
-  padding: 0;
+  padding-top: 8px;
   margin: 0;
 }
 
@@ -1677,8 +1704,8 @@ textarea {
 .catalog-filter {
   width: 807px;
   display: grid;
-  grid-row-gap: 8px;
-  grid-column-gap: 11px;
+  /*grid-row-gap: 8px;
+  grid-column-gap: 11px;*/
   grid-template-areas:
   "sorting price fats fats"
   "topping topping topping accept"
@@ -1694,10 +1721,12 @@ textarea {
   position: relative;
   display: flex;
   align-items: center;
+  margin-right: 24px;
 }
 /*Цена:*/
 .catalog-filter-group:nth-of-type(2) {
   grid-area: price;
+  margin-right: 24px;
 }
 /*Жирность:*/
 .catalog-filter-group:nth-of-type(3) {
@@ -1785,7 +1814,7 @@ textarea {
 
 .catalog-filter-list,
 .select-control {
-  margin-top: 8px;
+  margin-top: 3px;
 }
 
 .range-wrapper-scale {
@@ -1853,8 +1882,10 @@ textarea {
 .catalog-fats {
   min-width: 367px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 7px 16px;
+  padding: 7px 12px;
+  margin-top: 8px;
   background-color: rgba(252, 252, 252, 0.3);
   border: none;
   border-radius: 26px;
@@ -1864,24 +1895,21 @@ textarea {
 .catalog-toppings {
   min-width: 596px;
   display: flex;
-  justify-content: space-between;
-  padding: 8px 16px;
+  flex-wrap: wrap;
+  padding: 7px 16px;
   background-color: rgba(252, 252, 252, 0.3);
   border: none;
   border-radius: 26px;
 }
 
 .catalog-filter-item {
-  box-sizing: content-box;
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin-right: 14px;
 }
 
 .control {
   position: relative;
   display: block;
-  padding-left: 30px;
+  padding-left: 25px;
 }
 
 .control-mark {
@@ -1966,7 +1994,7 @@ textarea {
 
 .button-submit-filter {
   padding: 8px 53px;
-  margin-top: 28px;
+  margin-top: 23px;
   margin-bottom: 18px;
   text-align: center;
   cursor: pointer;
