@@ -240,7 +240,7 @@ a[href^="tel:"] {
 
 .navigation-user {
   font-size: 14px;
-  /*margin-left: 200px;*/
+  margin-left: 197px;
 }
 
 .navigation-user .navigation-link {
@@ -298,7 +298,7 @@ a[href^="tel:"] {
 
 .popover-types {
   position: absolute;
-  top: 40px;
+  top: 44px;
   left: 0;
   z-index: 1;
   box-sizing: border-box;
@@ -316,14 +316,14 @@ a[href^="tel:"] {
 
 .popover-types-close {
   position: absolute;
-  top: -45px;
-  left: 0;
-  padding: 8px 16px;
+  top: -40px;
+  left: -1px;
+  padding: 6px 16px;
   border-radius: 26px;
   background-color: rgba(252, 252, 252, 1);
   border: none;
   font-family: "Inter", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -368,7 +368,7 @@ a[href^="tel:"] {
 
 .popover-search {
   position: absolute;
-  top: 40px;
+  top: 44px;
   right: 0;
   z-index: 1;
   box-sizing: border-box;
@@ -441,7 +441,7 @@ a[href^="tel:"] {
 
 .popover-login {
   position: absolute;
-  top: 40px;
+  top: 44px;
   right: 0;
   z-index: 1;
   box-sizing: border-box;
@@ -460,7 +460,7 @@ a[href^="tel:"] {
   position: absolute;
   top: -40px;
   right: 0px;
-  padding: 8px 16px;
+  padding: 6px 16px;
   border-radius: 26px;
   background-color: rgba(252, 252, 252, 1);
   border: none;
@@ -558,7 +558,7 @@ a[href^="tel:"] {
 
 .popover-cart {
   position: absolute;
-  top: 40px;
+  top: 44px;
   right: 0;
   z-index: 1;
   box-sizing: border-box;
@@ -577,7 +577,7 @@ a[href^="tel:"] {
   position: absolute;
   top: -40px;
   right: 0;
-  padding: 8px 16px;
+  padding: 6px 16px;
   border-radius: 26px;
   background-color: rgba(252, 252, 252, 1);
   border: none;
@@ -694,7 +694,7 @@ a[href^="tel:"] {
 
 .slider-list-item:nth-of-type(2) {
   position: relative;
-  left: 10px;
+  right: 40px;
   top: 3px;
 }
 
@@ -739,19 +739,13 @@ a[href^="tel:"] {
 .slider-list-item:nth-of-type(4) {
   width: 100px;
   position: relative;
-  margin-bottom: 70px;
   text-align: center;
-  top: 136px;
-  left: -3px;
+  padding-top: 136px;
+  right: 179px;
 }
 
 .slider-list-item:nth-of-type(3) {
-  margin-left: 62px;
-}
-
-
-.slider-list-item:nth-of-type(4) {
-  margin-left: 41px;
+  margin-left: 145px;
 }
 
 .slider-list-item:nth-of-type(3)::before,
@@ -763,7 +757,7 @@ a[href^="tel:"] {
   position: absolute;
   content: "";
   display: block;
-  top: 75px;
+  top: 210px;
   z-index: -1;
 }
 
@@ -857,7 +851,7 @@ a[href^="tel:"] {
 
 .social-right {
   display: flex;
-  justify-content: flex-end;
+  padding-right: 180px;
 }
 
 /*Отступ для примера*/
@@ -865,7 +859,8 @@ a[href^="tel:"] {
   margin-left: 15px;
 }
 
-.social-right-icon a {
+.social-right-icon a,
+.social-left-icon a {
   display: flex;
   width: 24px;
   height: 24px;
@@ -873,24 +868,24 @@ a[href^="tel:"] {
   border-radius: 16px;
 }
 
-.social-right-icon a:hover {
+.social-right-icon a:hover,
+.social-left-icon a:hover {
   background-color: rgba(45, 52, 64, 1);
   outline: 2px solid rgba(252, 252, 252, 0.2);
 }
 
-.social-right-icon a:focus {
+.social-right-icon a:focus,
+.social-left-icon a:hover {
   background-color: rgba(45, 52, 64, 1);
   outline: 2px solid rgba(45, 52, 64, 1);
 }
 
 .banners-box {
   display: flex;
-  justify-content: center;
 }
 
 .banner {
   display: flex;
-  flex: 1 1 auto;
   min-width: 570px;
   min-height: 268px;
   background-color: rgba(255, 119, 153, 1);
@@ -899,6 +894,11 @@ a[href^="tel:"] {
 
 .banner:nth-of-type(1) {
   margin-right: 30px;
+}
+
+.banners .title,
+.goods .title {
+  padding-right: 181px;
 }
 
 .banner-words:nth-of-type(1) {
@@ -960,9 +960,8 @@ a[href^="tel:"] {
 }
 
 .product {
-  padding-top: 32px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 270px);
   grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 50px;
@@ -991,6 +990,7 @@ a[href^="tel:"] {
   position: absolute;
   left: 39px;
   top: -52px;
+  border-radius: 50%;
 }
 
 .product-card-link .title-prod {
@@ -1115,15 +1115,12 @@ button.add-to-basket {
 
 .news-and-subscription {
   display: flex;
-  justify-content: center;
 }
 
 .news,
 .subscription {
-  width: 50%;
   box-sizing: border-box;
   min-width: 570px;
-  min-height: 220px;
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: rgba(255, 255, 255, 1);
@@ -1213,13 +1210,12 @@ button.add-to-basket {
 
 .delivery {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  width: 1170px;
   min-height: 534px;
   background-image: url('../img/delivery-bg.jpg');
   background-repeat: no-repeat;
   background-color: rgba(243, 243, 243, 1);
-  background-size: 100%;
   border-radius: 16px;
   margin-top: -4px;
 }
@@ -1241,7 +1237,8 @@ button.add-to-basket {
   box-sizing: border-box;
   width: 500px;
   min-height: 406px;
-  margin: 64px;
+  margin: 63px;
+  margin-left: 130px;
 }
 
 .delivery-form-inputs {
@@ -1341,6 +1338,7 @@ button.add-to-basket {
 
 .feedback {
   box-sizing: border-box;
+  width: 1170px;
   min-height: 492px;
   background-image: url('../img/feedback-bg.jpg');
   background-color: rgba(224, 189, 193, 1);
@@ -1388,10 +1386,10 @@ button.add-to-basket {
 .footer {
   margin: 48px auto;
   display: flex;
-  justify-content: space-between;
 }
 
 .social-left {
+  width: 390px;
   display: flex;
   flex-wrap: wrap;
   min-width: 220px;
@@ -1407,6 +1405,7 @@ button.add-to-basket {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2,1fr);
   justify-content: center;
+  padding-left: 35px;
 }
 
 .more-information {
@@ -1431,7 +1430,7 @@ button.add-to-basket {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin-right: 15px;
+  padding-left: 170px;
 }
 
 .modal-container {
@@ -1561,7 +1560,7 @@ textarea {
 
 .popover-catalog {
   position: absolute;
-  top: 40px;
+  top: 44px;
   right: 0;
   z-index: 2;
   box-sizing: border-box;
@@ -1702,43 +1701,49 @@ textarea {
 }
 
 .catalog-filter {
+  box-sizing: border-box;
   width: 807px;
   display: grid;
-  /*grid-row-gap: 8px;
-  grid-column-gap: 11px;*/
-  grid-template-areas:
-  "sorting price fats fats"
-  "topping topping topping accept"
+  grid-row-gap: 20px;
+  grid-column-gap: 14px;
+  grid-template-columns: repeat(2, 196px) repeat(2, 187px);
+  grid-template-rows: repeat(2, 64px);
 }
 
 .catalog-filter-title {
   padding-left: 16px;
 }
 
+.catalog-filter-group {
+  margin-right: 24px;
+}
+
 /*Сортировка:*/
 .catalog-filter-group:nth-of-type(1) {
-  grid-area: sorting;
-  position: relative;
   display: flex;
   align-items: center;
-  margin-right: 24px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 /*Цена:*/
 .catalog-filter-group:nth-of-type(2) {
-  grid-area: price;
-  margin-right: 24px;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 }
 /*Жирность:*/
 .catalog-filter-group:nth-of-type(3) {
-  grid-area: fats;
+  grid-column: 3 / 5;
+  grid-row: 1 / 2;
 }
 /*Наполнители:*/
 .catalog-filter-group:nth-of-type(4) {
-  grid-area: topping;
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
 }
 /*Применить*/
 .catalog-filter-group a {
-  grid-area: accept;
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
 }
 
 .select-control {
@@ -1746,6 +1751,7 @@ textarea {
   height: 36px;
   padding: 8px 16px;
   padding-right: 34px;
+  margin-top: 18px;
   font: inherit;
   font-weight: 400;
   background-color: rgba(252, 252, 252, 0.3);
@@ -1812,8 +1818,7 @@ textarea {
   margin: 0;
 }
 
-.catalog-filter-list,
-.select-control {
+.catalog-filter-list {
   margin-top: 3px;
 }
 
@@ -2021,18 +2026,20 @@ textarea {
   cursor: default;
 }
 
+.products-empty {
+  margin-bottom: 94px;
+}
+
 .pagination {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  padding-top: 36px;
+  padding-top: 17px;
   padding-bottom: 84px;
   border-bottom: 1px solid rgba(252, 252, 252, 0.3);
 }
 
 .pagination-empty {
-  width: 130px;
+  width: 496px;
 }
 
 .paginataion-list {
@@ -2040,6 +2047,7 @@ textarea {
   justify-content: center;
   align-items: center;
   align-content: flex-end;
+  margin-left: 307px;
   padding: 0;
 }
 
