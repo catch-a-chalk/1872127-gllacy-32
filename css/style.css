@@ -340,6 +340,7 @@ a[href^="tel:"] {
 }
 
 .types-item a {
+  display: block;
   padding-left: 16px;
   padding-right: 15px;
   font-size: 14px;
@@ -1898,7 +1899,7 @@ textarea {
 
 /*Наполнители*/
 .catalog-toppings {
-  min-width: 596px;
+  min-width: 578px;
   display: flex;
   flex-wrap: wrap;
   padding: 7px 16px;
