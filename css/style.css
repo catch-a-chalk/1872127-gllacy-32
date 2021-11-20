@@ -36,7 +36,6 @@ body {
   margin-right: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -182,7 +181,6 @@ a[href^="tel:"] {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  width: 100%;
   margin: 0 auto;
   padding-top: 15px;
   padding-bottom: 34px;
@@ -731,15 +729,6 @@ a[href^="tel:"] {
   position: relative;
   text-align: center;
   padding-top: 136px;
-  right: 179px;
-}
-
-.slider-list-item:nth-of-type(3) {
-  margin-left: 145px;
-}
-
-.slider-list-item:nth-of-type(4) {
-  margin-right: 0;
 }
 
 .slider-list-item:nth-of-type(3)::before,
@@ -847,7 +836,6 @@ a[href^="tel:"] {
 
 .social-right {
   display: flex;
-  padding-right: 180px;
 }
 
 /*Отступ для примера*/
