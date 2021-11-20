@@ -60,7 +60,8 @@
               </button>
               <div class="popover-content">
                 <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-                  <input type="text" name="search" placeholder="Поиск по сайту">
+                  <label for="search">Адрес</label>
+                  <input type="text" id="search" name="search" placeholder="Поиск по сайту">
                   <button class="button-cross" type="reset">
                     <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M12.803 4.138a.667.667 0 1 0-.943-.943L8 7.056l-3.862-3.86a.667.667 0 1 0-.943.942L7.056 8l-3.86 3.861a.667.667 0 1 0 .942.943L8 8.942l3.861 3.861a.667.667 0 1 0 .943-.943L8.942 8l3.861-3.862Z" fill="#2D3440" opacity=".4"/>
@@ -376,6 +377,12 @@
                 </button>
               </span>
               <input type="text" id="appointment-date" name="appointment-date" placeholder="01.04.2020">
+              <!-- В div ниже можно добавить класс popover-open -->
+              <div class="popover-tooltip">
+                <div class="popover-content">
+                  <h2 class="popover-tooltip-title">Тултип</h2>
+                </div>
+              </div>
             </p>
             <p class="delivery-form-phone">
               <span class="form-label form-label-icon">
@@ -391,6 +398,12 @@
                 </button>
               </span>
               <input type="text" id="appointment-address" name="appointment-address" placeholder="Ул. Большая Конюшенная, 19/8">
+              <!-- В div ниже можно добавить класс popover-open -->
+              <div class="popover-caption">
+                <div class="popover-content">
+                  <h2 class="popover-caption-title">Введите название<br>улицы, дома и квартиры</h2>
+                </div>
+              </div>
             </p>
             <button class="button-red" type="submit">Отправить</button>
           </form>
@@ -454,7 +467,7 @@
           </li>
         </ul>
         <div class="to-academy">
-          <p class="academy-logo">
+          <p>
             <a href="https://htmlacademy.ru/">
               <img src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy" height="27" width="93">
             </a>
