@@ -34,9 +34,6 @@ body {
   padding-right: 98px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 a {
@@ -170,8 +167,6 @@ a[href^="tel:"] {
 }
 
 .page-header {
-  display: flex;
-  align-items: center;
   min-height: 104px;
   margin-bottom: 8px;
 }
@@ -181,7 +176,6 @@ a[href^="tel:"] {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  margin: 0 auto;
   padding-top: 15px;
   padding-bottom: 34px;
 }
@@ -223,7 +217,7 @@ a[href^="tel:"] {
 
 .navigation-user {
   font-size: 14px;
-  margin-left: 197px;
+  margin: 0 auto;
 }
 
 .navigation-user .navigation-link {
@@ -663,32 +657,25 @@ a[href^="tel:"] {
   cursor: default;
 }
 
-.first-screen,
-.first-screen-bottom {
-  width: 100%;
-}
-
 .slider-list {
   display: flex;
-  justify-content: space-between;
   box-sizing: content-box;
 }
 
 .slider-list-item:nth-of-type(1) {
   width: 470px;
   margin-left: 70px;
-  padding-top: 120px;
+  padding-top: 84px;
 }
 
 .slider-list-item:nth-of-type(2) {
   position: relative;
-  right: 40px;
+  right: 0;
   top: 3px;
 }
 
 .first-screen-bottom {
   display: flex;
-  justify-content: space-between;
 }
 
 .ice-cream-title {
@@ -723,12 +710,20 @@ a[href^="tel:"] {
    z-index: -1;
 }
 
+.slider-list-item:nth-of-type(3) {
+  right: -46px;
+}
+
+.slider-list-item:nth-of-type(4) {
+  right: -88px;
+}
+
 .slider-list-item:nth-of-type(3),
 .slider-list-item:nth-of-type(4) {
   width: 100px;
   position: relative;
   text-align: center;
-  padding-top: 136px;
+  top: 143px;
 }
 
 .slider-list-item:nth-of-type(3)::before,
@@ -740,7 +735,7 @@ a[href^="tel:"] {
   position: absolute;
   content: "";
   display: block;
-  top: 210px;
+  top: 68px;
   z-index: -1;
 }
 
@@ -797,7 +792,6 @@ a[href^="tel:"] {
 
 .slider-pagination {
   display: flex;
-  justify-content: flex-start;
 }
 
 /*Отступ для примера*/
@@ -836,6 +830,7 @@ a[href^="tel:"] {
 
 .social-right {
   display: flex;
+  margin-left: 1000px;
 }
 
 /*Отступ для примера*/
@@ -889,6 +884,7 @@ a[href^="tel:"] {
 .banners .title,
 .goods .title {
   margin-top: 0;
+  padding-right: 180px;
 }
 
 .banner-words:nth-of-type(1) {
@@ -927,6 +923,7 @@ a[href^="tel:"] {
 }
 
 .banner-words h3 {
+  margin-top: 0;
   margin-bottom: 17px;
 }
 
@@ -985,6 +982,10 @@ a[href^="tel:"] {
 
 .product-card-link .title-prod {
   margin-top: 133px;
+}
+
+.product-card-link .text-prod {
+  margin-top: 0;
 }
 
 button.add-to-basket {
