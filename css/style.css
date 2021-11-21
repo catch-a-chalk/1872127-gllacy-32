@@ -23,6 +23,7 @@
 }
 
 body {
+  max-width: 1170px;
   font-family: "Inter", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -172,6 +173,7 @@ a[href^="tel:"] {
 }
 
 .navigation {
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -217,7 +219,7 @@ a[href^="tel:"] {
 
 .navigation-user {
   font-size: 14px;
-  margin: 0 auto;
+  margin-left: auto;
 }
 
 .navigation-user .navigation-link {
@@ -236,6 +238,12 @@ a[href^="tel:"] {
   align-items: center;
   padding: 0;
   background-color: rgba(252, 252, 252, 0.3);
+}
+
+.navigation-user .navigation-item:nth-child(2) .popover-close-button,
+.navigation-user .navigation-item:nth-child(3) .popover-close-button,
+.navigation-user .navigation-item:nth-child(4) .popover-close-button {
+  background-color: rgba(252, 252, 252, 1);
 }
 
 .navigation-link-login,
@@ -282,7 +290,7 @@ a[href^="tel:"] {
   width: 138px;
   min-height: 192px;
   padding-top: 16px;
-  padding-bottom: 16px;
+  padding-bottom: 4px;
   background-color: rgba(252, 252, 252, 1);
   border-radius: 4px;
   font-family: "Inter", sans-serif;
@@ -291,36 +299,17 @@ a[href^="tel:"] {
   display: none;
 }
 
-.popover-types-close {
-  display: inline-block;
-  position: absolute;
-  top: -40px;
-  left: -1px;
-  padding: 6px 16px;
-  border-radius: 26px;
-  background-color: rgba(252, 252, 252, 1);
-  border: none;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-}
-
 .popover-types-title {
   padding-left: 16px;
   padding-bottom: 12px;
+  margin-top: 0px;
   margin-bottom: 4px;
   border-bottom: 1px solid rgba(185, 185, 185, 1);
 }
 
-.types-item {
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
 .types-item a {
   display: block;
-  padding-left: 16px;
-  padding-right: 15px;
+  padding: 8px 15px 8px 16px;
   font-size: 14px;
   line-height: 20px;
 }
@@ -362,6 +351,31 @@ a[href^="tel:"] {
   display: none;
 }
 
+.search-form:hover input {
+  border: 1px solid rgba(45, 52, 64, 1);
+}
+
+.search-form:focus input {
+  border: 2px solid rgba(45, 52, 64, 1);
+}
+
+.search-form:disabled input {
+  background-color: rgba(231, 231, 231, 1);
+  cursor: default;
+}
+
+.search-form:invalid input {
+  border: 1px solid rgba(234, 84, 84, 1);
+}
+
+.search-form:invalid:hover input {
+  border: 2px solid rgba(234, 84, 84, 1);
+}
+
+.search-form:invalid:focus input {
+  border: 2px solid rgba(234, 84, 84, 1);
+}
+
 .search-form {
   position: relative;
 }
@@ -393,30 +407,9 @@ a[href^="tel:"] {
   cursor: pointer;
 }
 
-.popover-search-close {
-  display: inline-block;
-  position: absolute;
-  top: -40px;
-  right: 0;
-  border-radius: 26px;
-  background-color: rgba(252, 252, 252, 1);
-  border: none;
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-}
-
 .search-form input {
   padding-left: 16px;
   padding-right: 40px;
-}
-
-.popover-open .popover-search-close {
-  width: 32px;
-  height: 32px;
-  background-image: url('../img/icons/icon-nav-search.svg');
-  background-repeat: no-repeat;
-  background-position: 7px center;
 }
 
 .popover-login {
@@ -436,29 +429,16 @@ a[href^="tel:"] {
   display: none;
 }
 
-.popover-login-close {
-  display: inline-block;
-  position: absolute;
-  top: -40px;
-  right: 0px;
-  padding: 6px 16px;
-  border-radius: 26px;
-  background-color: rgba(252, 252, 252, 1);
-  border: none;
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-}
-
-.popover-open .popover-login-close {
-  padding-left: 42px;
-  background-image: url('../img/icons/icon-nav-log.svg');
-  background-repeat: no-repeat;
-  background-position: 17px center;
-}
-
 .popover-login-title {
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.login-form-email {
+  margin-bottom: 16px;
+
+}
+.login-form-password {
   margin-bottom: 32px;
 }
 
@@ -504,12 +484,7 @@ a[href^="tel:"] {
   float: left;
 }
 
-.login-form-email input {
-  margin-bottom: 16px;
-}
-
 .login-form-password input {
-  margin-bottom: 32px;
   letter-spacing: 4px;
 }
 
@@ -554,37 +529,23 @@ a[href^="tel:"] {
   display: none;
 }
 
-.popover-cart-close {
-  display: inline-block;
-  position: absolute;
-  top: -40px;
-  right: 0;
-  padding: 6px 16px;
-  border-radius: 26px;
-  background-color: rgba(252, 252, 252, 1);
-  border: none;
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-}
-
-.popover-cart .popover-cart-close {
-  padding-left: 42px;
-  background-image: url('../img/icons/icon-nav-cart.svg');
-  background-repeat: no-repeat;
-  background-position: 17px center;
-}
-
 .popover-content {
   height: 100%;
 }
 
 .popover-cart-title {
-  margin-top: 0;
+  margin: 0 auto;
   font-size: 24px;
   line-height: 30px;
   text-align: center;
+}
+
+.popover-close-button {
+  background-color: rgba(252, 252, 252, 1);
+}
+
+.popover-close-button svg {
+  fill: rgba(252, 252, 252, 1);
 }
 
 .current-page,
@@ -884,7 +845,6 @@ a[href^="tel:"] {
 .banners .title,
 .goods .title {
   margin-top: 0;
-  padding-right: 180px;
 }
 
 .banner-words:nth-of-type(1) {
@@ -1377,7 +1337,7 @@ button.add-to-basket {
 
 .popover-tooltip-title,
 .popover-caption-title {
-  margin-top: 0;
+  margin: 0 auto;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
@@ -1387,7 +1347,7 @@ button.add-to-basket {
 .popover-caption {
   position: absolute;
   top: 210px;
-  left: 200px;
+  left: 117px;
   z-index: 1;
   box-sizing: border-box;
   width: 169px;
@@ -1498,9 +1458,8 @@ button.add-to-basket {
 
 .more {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 151px) repeat(1, 1fr);
   grid-template-rows: repeat(2,1fr);
-  justify-content: center;
   padding-left: 35px;
 }
 
@@ -1526,7 +1485,7 @@ button.add-to-basket {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding-left: 180px;
+  margin-left: auto;
 }
 
 .to-academy p {
@@ -1656,7 +1615,7 @@ textarea {
 }
 
 .feedback-form button {
-  margin-left: 307px;
+  margin-left: 293px;
 }
 
 .popover-catalog {
@@ -1690,14 +1649,8 @@ textarea {
   font-weight: 400;
 }
 
-.popover-catalog .popover-catalog-close {
-  padding-left: 42px;
-  background-image: url('../img/icons/icon-nav-cart.svg');
-  background-repeat: no-repeat;
-  background-position: 17px center;
-}
-
 .popover-catalog-title {
+  margin-top: 0;
   margin-bottom: 32px;
   font-weight: 700;
   font-size: 24px;
